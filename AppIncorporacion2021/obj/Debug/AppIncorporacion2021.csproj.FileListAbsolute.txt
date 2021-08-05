@@ -1,0 +1,58 @@
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\AppIncorporacion2021.exe.config
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.exe
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.pdb
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\AppIncorporacion2021.exe
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\AppIncorporacion2021.pdb
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.csprojResolveAssemblyReference.cache
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Main.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Properties.Resources.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.csproj.GenerateResource.Cache
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\AppIncorporacion2021.exe.config
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\AppIncorporacion2021.exe
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\AppIncorporacion2021.pdb
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\Guna.UI.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\MySql.Data.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Main.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Properties.Resources.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.csproj.GenerateResource.Cache
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.exe
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.pdb
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.Dashboard.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.csprojResolveAssemblyReference.cache
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\System.Data.SQLite.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.CargarDB.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\x86\sqlite3.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\x64\sqlite3.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\EntityFramework.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\EntityFramework.SqlServer.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\EntityFramework.xml
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\x86\sqlite3.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\x64\sqlite3.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\EntityFramework.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\EntityFramework.xml
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.Dashboard.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.CargarDB.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\System.Data.SQLite.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\System.Data.SQLite.xml
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\System.Data.SQLite.EF6.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\System.Data.SQLite.Linq.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\System.Data.SQLite.xml
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.Metas.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.Metas.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\SpreadsheetLight.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\DocumentFormat.OpenXml.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\SpreadsheetLight.xml
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.CargarExcel.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.DetallesIncorporacion.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.OrdenPago.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\SpreadsheetLight.dll
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\bin\Debug\SpreadsheetLight.xml
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.CargarExcel.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.DetallesIncorporacion.resources
+C:\Users\Oscar Larios\Documents\Visual Studio 2015\Projects\IncorporacionSAO\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.OrdenPago.resources
