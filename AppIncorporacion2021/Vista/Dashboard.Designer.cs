@@ -56,6 +56,7 @@
             this.gBtnSubMenuBasica = new Guna.UI.WinForms.GunaButton();
             this.gBtnUniversos = new Guna.UI.WinForms.GunaButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.gBtnSiDm = new Guna.UI.WinForms.GunaButton();
             this.pnlEncabezado.SuspendLayout();
             this.pnlCentral.SuspendLayout();
             this.pnlMenuLateral.SuspendLayout();
@@ -177,9 +178,9 @@
             // 
             this.pnlPiePagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.pnlPiePagina.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlPiePagina.Location = new System.Drawing.Point(0, 711);
+            this.pnlPiePagina.Location = new System.Drawing.Point(0, 729);
             this.pnlPiePagina.Name = "pnlPiePagina";
-            this.pnlPiePagina.Size = new System.Drawing.Size(1033, 31);
+            this.pnlPiePagina.Size = new System.Drawing.Size(1033, 13);
             this.pnlPiePagina.TabIndex = 1;
             // 
             // pnlCentral
@@ -189,7 +190,7 @@
             this.pnlCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentral.Location = new System.Drawing.Point(0, 42);
             this.pnlCentral.Name = "pnlCentral";
-            this.pnlCentral.Size = new System.Drawing.Size(1033, 669);
+            this.pnlCentral.Size = new System.Drawing.Size(1033, 687);
             this.pnlCentral.TabIndex = 2;
             // 
             // pnlMenu
@@ -198,7 +199,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(240, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(793, 669);
+            this.pnlMenu.Size = new System.Drawing.Size(793, 687);
             this.pnlMenu.TabIndex = 1;
             // 
             // pnlMenuLateral
@@ -215,19 +216,20 @@
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(240, 669);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(240, 687);
             this.pnlMenuLateral.TabIndex = 0;
             // 
             // pnlSubMenuAdmin
             // 
             this.pnlSubMenuAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.pnlSubMenuAdmin.Controls.Add(this.gBtnSiDm);
             this.pnlSubMenuAdmin.Controls.Add(this.gBtnSubMenuAdminJef);
             this.pnlSubMenuAdmin.Controls.Add(this.gBtnSubMenuAdminEms);
             this.pnlSubMenuAdmin.Controls.Add(this.gBtnSubMenuAdminBasica);
             this.pnlSubMenuAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenuAdmin.Location = new System.Drawing.Point(0, 486);
             this.pnlSubMenuAdmin.Name = "pnlSubMenuAdmin";
-            this.pnlSubMenuAdmin.Size = new System.Drawing.Size(240, 130);
+            this.pnlSubMenuAdmin.Size = new System.Drawing.Size(240, 182);
             this.pnlSubMenuAdmin.TabIndex = 7;
             // 
             // gBtnSubMenuAdminJef
@@ -252,7 +254,7 @@
             this.gBtnSubMenuAdminJef.OnHoverImage = null;
             this.gBtnSubMenuAdminJef.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnSubMenuAdminJef.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.gBtnSubMenuAdminJef.Size = new System.Drawing.Size(240, 42);
+            this.gBtnSubMenuAdminJef.Size = new System.Drawing.Size(240, 46);
             this.gBtnSubMenuAdminJef.TabIndex = 2;
             this.gBtnSubMenuAdminJef.Text = "Educación Superior";
             this.gBtnSubMenuAdminJef.Click += new System.EventHandler(this.gBtnSubMenuAdminJef_Click);
@@ -583,6 +585,32 @@
             this.pnlLogo.Size = new System.Drawing.Size(240, 100);
             this.pnlLogo.TabIndex = 0;
             // 
+            // gBtnSiDm
+            // 
+            this.gBtnSiDm.AnimationHoverSpeed = 0.07F;
+            this.gBtnSiDm.AnimationSpeed = 0.03F;
+            this.gBtnSiDm.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.gBtnSiDm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnSiDm.BorderSize = 1;
+            this.gBtnSiDm.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnSiDm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gBtnSiDm.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnSiDm.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.gBtnSiDm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gBtnSiDm.Image = global::AppIncorporacion2021.Properties.Resources.icons8_university_100px_1;
+            this.gBtnSiDm.ImageSize = new System.Drawing.Size(30, 30);
+            this.gBtnSiDm.Location = new System.Drawing.Point(0, 130);
+            this.gBtnSiDm.Name = "gBtnSiDm";
+            this.gBtnSiDm.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gBtnSiDm.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gBtnSiDm.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnSiDm.OnHoverImage = null;
+            this.gBtnSiDm.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnSiDm.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.gBtnSiDm.Size = new System.Drawing.Size(240, 35);
+            this.gBtnSiDm.TabIndex = 3;
+            this.gBtnSiDm.Text = "Sis. Info. Dm";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,5 +661,6 @@
         private Guna.UI.WinForms.GunaButton btnMin;
         private Guna.UI.WinForms.GunaButton btnMax;
         private Guna.UI.WinForms.GunaButton btnClose;
+        private Guna.UI.WinForms.GunaButton gBtnSiDm;
     }
 }

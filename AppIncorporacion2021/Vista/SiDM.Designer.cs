@@ -1,6 +1,6 @@
 ﻿namespace AppIncorporacion2021.Vista
 {
-    partial class OrdenPago
+    partial class SiDM
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenPago));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SiDM));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.gBtnImportarBD = new Guna.UI.WinForms.GunaButton();
-            this.gBtnExcel = new Guna.UI.WinForms.GunaButton();
-            this.gBtnLimpiarCajas = new Guna.UI.WinForms.GunaButton();
+            this.gBtnImportarBDSiDM = new Guna.UI.WinForms.GunaButton();
+            this.gBtnExcelSiDM = new Guna.UI.WinForms.GunaButton();
+            this.gBtnLimpiarCajasSiDM = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gTxtDirectorio = new Guna.UI.WinForms.GunaTextBox();
+            this.gTxtDirectorioSiDM = new Guna.UI.WinForms.GunaTextBox();
             this.gBtnCloseForm = new Guna.UI.WinForms.GunaButton();
-            this.gbtnDirectorio = new Guna.UI.WinForms.GunaButton();
+            this.gbtnDirectorioSiDM = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gTxtFiltro = new Guna.UI.WinForms.GunaTextBox();
+            this.gTxtFiltroSiDM = new Guna.UI.WinForms.GunaTextBox();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.dtgvArchivos = new System.Windows.Forms.DataGridView();
             this.rTxtboxMostrarArchivos = new System.Windows.Forms.RichTextBox();
@@ -46,6 +46,9 @@
             this.lblTotalArchivos = new Guna.UI.WinForms.GunaLabel();
             this.ltbArchivos = new System.Windows.Forms.ListBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkConSubDir = new System.Windows.Forms.CheckBox();
+            this.chkIgnorarError = new System.Windows.Forms.CheckBox();
             this.panel3.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvArchivos)).BeginInit();
@@ -55,100 +58,103 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Controls.Add(this.gBtnImportarBD);
-            this.panel3.Controls.Add(this.gBtnExcel);
-            this.panel3.Controls.Add(this.gBtnLimpiarCajas);
+            this.panel3.Controls.Add(this.checkBox1);
+            this.panel3.Controls.Add(this.chkConSubDir);
+            this.panel3.Controls.Add(this.chkIgnorarError);
+            this.panel3.Controls.Add(this.gBtnImportarBDSiDM);
+            this.panel3.Controls.Add(this.gBtnExcelSiDM);
+            this.panel3.Controls.Add(this.gBtnLimpiarCajasSiDM);
             this.panel3.Controls.Add(this.gunaLabel1);
-            this.panel3.Controls.Add(this.gTxtDirectorio);
+            this.panel3.Controls.Add(this.gTxtDirectorioSiDM);
             this.panel3.Controls.Add(this.gBtnCloseForm);
-            this.panel3.Controls.Add(this.gbtnDirectorio);
+            this.panel3.Controls.Add(this.gbtnDirectorioSiDM);
             this.panel3.Controls.Add(this.gunaLabel2);
-            this.panel3.Controls.Add(this.gTxtFiltro);
+            this.panel3.Controls.Add(this.gTxtFiltroSiDM);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1287, 162);
+            this.panel3.Size = new System.Drawing.Size(1287, 178);
             this.panel3.TabIndex = 4;
             // 
-            // gBtnImportarBD
+            // gBtnImportarBDSiDM
             // 
-            this.gBtnImportarBD.AnimationHoverSpeed = 0.07F;
-            this.gBtnImportarBD.AnimationSpeed = 0.03F;
-            this.gBtnImportarBD.BackColor = System.Drawing.Color.Transparent;
-            this.gBtnImportarBD.BaseColor = System.Drawing.Color.White;
-            this.gBtnImportarBD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnImportarBD.BorderSize = 2;
-            this.gBtnImportarBD.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnImportarBD.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnImportarBD.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBtnImportarBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnImportarBD.Image = ((System.Drawing.Image)(resources.GetObject("gBtnImportarBD.Image")));
-            this.gBtnImportarBD.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnImportarBD.Location = new System.Drawing.Point(1012, 83);
-            this.gBtnImportarBD.Name = "gBtnImportarBD";
-            this.gBtnImportarBD.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gBtnImportarBD.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnImportarBD.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnImportarBD.OnHoverImage = null;
-            this.gBtnImportarBD.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnImportarBD.Radius = 10;
-            this.gBtnImportarBD.Size = new System.Drawing.Size(240, 72);
-            this.gBtnImportarBD.TabIndex = 16;
-            this.gBtnImportarBD.Text = "Importar a BD";
-            this.gBtnImportarBD.Click += new System.EventHandler(this.gBtnImportarBD_Click);
+            this.gBtnImportarBDSiDM.AnimationHoverSpeed = 0.07F;
+            this.gBtnImportarBDSiDM.AnimationSpeed = 0.03F;
+            this.gBtnImportarBDSiDM.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnImportarBDSiDM.BaseColor = System.Drawing.Color.White;
+            this.gBtnImportarBDSiDM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnImportarBDSiDM.BorderSize = 2;
+            this.gBtnImportarBDSiDM.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnImportarBDSiDM.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnImportarBDSiDM.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnImportarBDSiDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnImportarBDSiDM.Image = ((System.Drawing.Image)(resources.GetObject("gBtnImportarBDSiDM.Image")));
+            this.gBtnImportarBDSiDM.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnImportarBDSiDM.Location = new System.Drawing.Point(1012, 83);
+            this.gBtnImportarBDSiDM.Name = "gBtnImportarBDSiDM";
+            this.gBtnImportarBDSiDM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnImportarBDSiDM.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnImportarBDSiDM.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnImportarBDSiDM.OnHoverImage = null;
+            this.gBtnImportarBDSiDM.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnImportarBDSiDM.Radius = 10;
+            this.gBtnImportarBDSiDM.Size = new System.Drawing.Size(240, 72);
+            this.gBtnImportarBDSiDM.TabIndex = 16;
+            this.gBtnImportarBDSiDM.Text = "Respaldar en BD";
+            this.gBtnImportarBDSiDM.Click += new System.EventHandler(this.gBtnImportarBD_Click);
             // 
-            // gBtnExcel
+            // gBtnExcelSiDM
             // 
-            this.gBtnExcel.AnimationHoverSpeed = 0.07F;
-            this.gBtnExcel.AnimationSpeed = 0.03F;
-            this.gBtnExcel.BackColor = System.Drawing.Color.Transparent;
-            this.gBtnExcel.BaseColor = System.Drawing.Color.White;
-            this.gBtnExcel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnExcel.BorderSize = 2;
-            this.gBtnExcel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnExcel.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnExcel.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBtnExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnExcel.Image = ((System.Drawing.Image)(resources.GetObject("gBtnExcel.Image")));
-            this.gBtnExcel.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnExcel.Location = new System.Drawing.Point(723, 83);
-            this.gBtnExcel.Name = "gBtnExcel";
-            this.gBtnExcel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gBtnExcel.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnExcel.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnExcel.OnHoverImage = null;
-            this.gBtnExcel.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnExcel.Radius = 10;
-            this.gBtnExcel.Size = new System.Drawing.Size(240, 72);
-            this.gBtnExcel.TabIndex = 15;
-            this.gBtnExcel.Text = "Exportar Excel";
-            this.gBtnExcel.Click += new System.EventHandler(this.gBtnExcel_Click);
+            this.gBtnExcelSiDM.AnimationHoverSpeed = 0.07F;
+            this.gBtnExcelSiDM.AnimationSpeed = 0.03F;
+            this.gBtnExcelSiDM.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnExcelSiDM.BaseColor = System.Drawing.Color.White;
+            this.gBtnExcelSiDM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnExcelSiDM.BorderSize = 2;
+            this.gBtnExcelSiDM.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnExcelSiDM.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnExcelSiDM.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnExcelSiDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnExcelSiDM.Image = ((System.Drawing.Image)(resources.GetObject("gBtnExcelSiDM.Image")));
+            this.gBtnExcelSiDM.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnExcelSiDM.Location = new System.Drawing.Point(723, 83);
+            this.gBtnExcelSiDM.Name = "gBtnExcelSiDM";
+            this.gBtnExcelSiDM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnExcelSiDM.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnExcelSiDM.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnExcelSiDM.OnHoverImage = null;
+            this.gBtnExcelSiDM.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnExcelSiDM.Radius = 10;
+            this.gBtnExcelSiDM.Size = new System.Drawing.Size(240, 72);
+            this.gBtnExcelSiDM.TabIndex = 15;
+            this.gBtnExcelSiDM.Text = "Exportar Excel";
+            this.gBtnExcelSiDM.Click += new System.EventHandler(this.gBtnExcel_Click);
             // 
-            // gBtnLimpiarCajas
+            // gBtnLimpiarCajasSiDM
             // 
-            this.gBtnLimpiarCajas.AnimationHoverSpeed = 0.07F;
-            this.gBtnLimpiarCajas.AnimationSpeed = 0.03F;
-            this.gBtnLimpiarCajas.BackColor = System.Drawing.Color.Transparent;
-            this.gBtnLimpiarCajas.BaseColor = System.Drawing.Color.White;
-            this.gBtnLimpiarCajas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnLimpiarCajas.BorderSize = 2;
-            this.gBtnLimpiarCajas.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnLimpiarCajas.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnLimpiarCajas.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBtnLimpiarCajas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnLimpiarCajas.Image = ((System.Drawing.Image)(resources.GetObject("gBtnLimpiarCajas.Image")));
-            this.gBtnLimpiarCajas.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnLimpiarCajas.Location = new System.Drawing.Point(1012, 5);
-            this.gBtnLimpiarCajas.Name = "gBtnLimpiarCajas";
-            this.gBtnLimpiarCajas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gBtnLimpiarCajas.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnLimpiarCajas.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnLimpiarCajas.OnHoverImage = null;
-            this.gBtnLimpiarCajas.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnLimpiarCajas.Radius = 10;
-            this.gBtnLimpiarCajas.Size = new System.Drawing.Size(240, 72);
-            this.gBtnLimpiarCajas.TabIndex = 14;
-            this.gBtnLimpiarCajas.Text = "Limpiar Cajas";
+            this.gBtnLimpiarCajasSiDM.AnimationHoverSpeed = 0.07F;
+            this.gBtnLimpiarCajasSiDM.AnimationSpeed = 0.03F;
+            this.gBtnLimpiarCajasSiDM.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnLimpiarCajasSiDM.BaseColor = System.Drawing.Color.White;
+            this.gBtnLimpiarCajasSiDM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnLimpiarCajasSiDM.BorderSize = 2;
+            this.gBtnLimpiarCajasSiDM.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnLimpiarCajasSiDM.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnLimpiarCajasSiDM.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnLimpiarCajasSiDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnLimpiarCajasSiDM.Image = ((System.Drawing.Image)(resources.GetObject("gBtnLimpiarCajasSiDM.Image")));
+            this.gBtnLimpiarCajasSiDM.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnLimpiarCajasSiDM.Location = new System.Drawing.Point(1012, 5);
+            this.gBtnLimpiarCajasSiDM.Name = "gBtnLimpiarCajasSiDM";
+            this.gBtnLimpiarCajasSiDM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnLimpiarCajasSiDM.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnLimpiarCajasSiDM.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnLimpiarCajasSiDM.OnHoverImage = null;
+            this.gBtnLimpiarCajasSiDM.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnLimpiarCajasSiDM.Radius = 10;
+            this.gBtnLimpiarCajasSiDM.Size = new System.Drawing.Size(240, 72);
+            this.gBtnLimpiarCajasSiDM.TabIndex = 14;
+            this.gBtnLimpiarCajasSiDM.Text = "Limpiar Cajas";
             // 
             // gunaLabel1
             // 
@@ -161,24 +167,24 @@
             this.gunaLabel1.TabIndex = 13;
             this.gunaLabel1.Text = "DIRECTORIO:";
             // 
-            // gTxtDirectorio
+            // gTxtDirectorioSiDM
             // 
-            this.gTxtDirectorio.BackColor = System.Drawing.Color.Transparent;
-            this.gTxtDirectorio.BaseColor = System.Drawing.Color.White;
-            this.gTxtDirectorio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gTxtDirectorio.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gTxtDirectorio.FocusedBaseColor = System.Drawing.Color.White;
-            this.gTxtDirectorio.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gTxtDirectorio.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtDirectorio.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gTxtDirectorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtDirectorio.Location = new System.Drawing.Point(183, 85);
-            this.gTxtDirectorio.Name = "gTxtDirectorio";
-            this.gTxtDirectorio.PasswordChar = '\0';
-            this.gTxtDirectorio.Radius = 15;
-            this.gTxtDirectorio.SelectedText = "";
-            this.gTxtDirectorio.Size = new System.Drawing.Size(445, 48);
-            this.gTxtDirectorio.TabIndex = 12;
+            this.gTxtDirectorioSiDM.BackColor = System.Drawing.Color.Transparent;
+            this.gTxtDirectorioSiDM.BaseColor = System.Drawing.Color.White;
+            this.gTxtDirectorioSiDM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtDirectorioSiDM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gTxtDirectorioSiDM.FocusedBaseColor = System.Drawing.Color.White;
+            this.gTxtDirectorioSiDM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gTxtDirectorioSiDM.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtDirectorioSiDM.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gTxtDirectorioSiDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtDirectorioSiDM.Location = new System.Drawing.Point(179, 86);
+            this.gTxtDirectorioSiDM.Name = "gTxtDirectorioSiDM";
+            this.gTxtDirectorioSiDM.PasswordChar = '\0';
+            this.gTxtDirectorioSiDM.Radius = 15;
+            this.gTxtDirectorioSiDM.SelectedText = "";
+            this.gTxtDirectorioSiDM.Size = new System.Drawing.Size(445, 48);
+            this.gTxtDirectorioSiDM.TabIndex = 12;
             // 
             // gBtnCloseForm
             // 
@@ -205,32 +211,32 @@
             this.gBtnCloseForm.Size = new System.Drawing.Size(37, 32);
             this.gBtnCloseForm.TabIndex = 11;
             // 
-            // gbtnDirectorio
+            // gbtnDirectorioSiDM
             // 
-            this.gbtnDirectorio.AnimationHoverSpeed = 0.07F;
-            this.gbtnDirectorio.AnimationSpeed = 0.03F;
-            this.gbtnDirectorio.BackColor = System.Drawing.Color.Transparent;
-            this.gbtnDirectorio.BaseColor = System.Drawing.Color.White;
-            this.gbtnDirectorio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gbtnDirectorio.BorderSize = 2;
-            this.gbtnDirectorio.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gbtnDirectorio.FocusedColor = System.Drawing.Color.Empty;
-            this.gbtnDirectorio.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbtnDirectorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gbtnDirectorio.Image = global::AppIncorporacion2021.Properties.Resources.icons8_google_web_search_60px;
-            this.gbtnDirectorio.ImageSize = new System.Drawing.Size(40, 40);
-            this.gbtnDirectorio.Location = new System.Drawing.Point(723, 5);
-            this.gbtnDirectorio.Name = "gbtnDirectorio";
-            this.gbtnDirectorio.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gbtnDirectorio.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gbtnDirectorio.OnHoverForeColor = System.Drawing.Color.White;
-            this.gbtnDirectorio.OnHoverImage = null;
-            this.gbtnDirectorio.OnPressedColor = System.Drawing.Color.Black;
-            this.gbtnDirectorio.Radius = 10;
-            this.gbtnDirectorio.Size = new System.Drawing.Size(240, 72);
-            this.gbtnDirectorio.TabIndex = 6;
-            this.gbtnDirectorio.Text = "Examinar Directorio";
-            this.gbtnDirectorio.Click += new System.EventHandler(this.gbtnDirectorio_Click);
+            this.gbtnDirectorioSiDM.AnimationHoverSpeed = 0.07F;
+            this.gbtnDirectorioSiDM.AnimationSpeed = 0.03F;
+            this.gbtnDirectorioSiDM.BackColor = System.Drawing.Color.Transparent;
+            this.gbtnDirectorioSiDM.BaseColor = System.Drawing.Color.White;
+            this.gbtnDirectorioSiDM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gbtnDirectorioSiDM.BorderSize = 2;
+            this.gbtnDirectorioSiDM.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnDirectorioSiDM.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnDirectorioSiDM.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbtnDirectorioSiDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gbtnDirectorioSiDM.Image = global::AppIncorporacion2021.Properties.Resources.icons8_google_web_search_60px;
+            this.gbtnDirectorioSiDM.ImageSize = new System.Drawing.Size(40, 40);
+            this.gbtnDirectorioSiDM.Location = new System.Drawing.Point(723, 5);
+            this.gbtnDirectorioSiDM.Name = "gbtnDirectorioSiDM";
+            this.gbtnDirectorioSiDM.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gbtnDirectorioSiDM.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gbtnDirectorioSiDM.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnDirectorioSiDM.OnHoverImage = null;
+            this.gbtnDirectorioSiDM.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnDirectorioSiDM.Radius = 10;
+            this.gbtnDirectorioSiDM.Size = new System.Drawing.Size(240, 72);
+            this.gbtnDirectorioSiDM.TabIndex = 6;
+            this.gbtnDirectorioSiDM.Text = "Examinar Directorio";
+            this.gbtnDirectorioSiDM.Click += new System.EventHandler(this.gbtnDirectorio_Click);
             // 
             // gunaLabel2
             // 
@@ -243,25 +249,25 @@
             this.gunaLabel2.TabIndex = 5;
             this.gunaLabel2.Text = "FILTRO:";
             // 
-            // gTxtFiltro
+            // gTxtFiltroSiDM
             // 
-            this.gTxtFiltro.BackColor = System.Drawing.Color.Transparent;
-            this.gTxtFiltro.BaseColor = System.Drawing.Color.White;
-            this.gTxtFiltro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gTxtFiltro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gTxtFiltro.FocusedBaseColor = System.Drawing.Color.White;
-            this.gTxtFiltro.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gTxtFiltro.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtFiltro.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gTxtFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtFiltro.Location = new System.Drawing.Point(179, 18);
-            this.gTxtFiltro.Name = "gTxtFiltro";
-            this.gTxtFiltro.PasswordChar = '\0';
-            this.gTxtFiltro.Radius = 15;
-            this.gTxtFiltro.SelectedText = "";
-            this.gTxtFiltro.Size = new System.Drawing.Size(445, 48);
-            this.gTxtFiltro.TabIndex = 0;
-            this.gTxtFiltro.Text = "*.txt";
+            this.gTxtFiltroSiDM.BackColor = System.Drawing.Color.Transparent;
+            this.gTxtFiltroSiDM.BaseColor = System.Drawing.Color.White;
+            this.gTxtFiltroSiDM.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtFiltroSiDM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gTxtFiltroSiDM.FocusedBaseColor = System.Drawing.Color.White;
+            this.gTxtFiltroSiDM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gTxtFiltroSiDM.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtFiltroSiDM.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gTxtFiltroSiDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtFiltroSiDM.Location = new System.Drawing.Point(179, 18);
+            this.gTxtFiltroSiDM.Name = "gTxtFiltroSiDM";
+            this.gTxtFiltroSiDM.PasswordChar = '\0';
+            this.gTxtFiltroSiDM.Radius = 15;
+            this.gTxtFiltroSiDM.SelectedText = "";
+            this.gTxtFiltroSiDM.Size = new System.Drawing.Size(445, 48);
+            this.gTxtFiltroSiDM.TabIndex = 0;
+            this.gTxtFiltroSiDM.Text = "*.S3DB";
             // 
             // gunaElipsePanel1
             // 
@@ -276,7 +282,7 @@
             this.gunaElipsePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(1287, 598);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(1287, 705);
             this.gunaElipsePanel1.TabIndex = 5;
             // 
             // dtgvArchivos
@@ -284,15 +290,15 @@
             this.dtgvArchivos.AllowUserToAddRows = false;
             this.dtgvArchivos.AllowUserToDeleteRows = false;
             this.dtgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvArchivos.Location = new System.Drawing.Point(569, 411);
+            this.dtgvArchivos.Location = new System.Drawing.Point(569, 503);
             this.dtgvArchivos.Name = "dtgvArchivos";
             this.dtgvArchivos.ReadOnly = true;
-            this.dtgvArchivos.Size = new System.Drawing.Size(683, 238);
+            this.dtgvArchivos.Size = new System.Drawing.Size(683, 146);
             this.dtgvArchivos.TabIndex = 11;
             // 
             // rTxtboxMostrarArchivos
             // 
-            this.rTxtboxMostrarArchivos.Location = new System.Drawing.Point(569, 203);
+            this.rTxtboxMostrarArchivos.Location = new System.Drawing.Point(570, 296);
             this.rTxtboxMostrarArchivos.Name = "rTxtboxMostrarArchivos";
             this.rTxtboxMostrarArchivos.Size = new System.Drawing.Size(683, 201);
             this.rTxtboxMostrarArchivos.TabIndex = 10;
@@ -303,7 +309,7 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(565, 177);
+            this.gunaLabel5.Location = new System.Drawing.Point(564, 255);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(212, 25);
             this.gunaLabel5.TabIndex = 9;
@@ -323,9 +329,9 @@
             // ltbArchivos
             // 
             this.ltbArchivos.FormattingEnabled = true;
-            this.ltbArchivos.Location = new System.Drawing.Point(58, 203);
+            this.ltbArchivos.Location = new System.Drawing.Point(58, 294);
             this.ltbArchivos.Name = "ltbArchivos";
-            this.ltbArchivos.Size = new System.Drawing.Size(480, 446);
+            this.ltbArchivos.Size = new System.Drawing.Size(480, 355);
             this.ltbArchivos.TabIndex = 7;
             // 
             // gunaLabel3
@@ -333,21 +339,55 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(22, 177);
+            this.gunaLabel3.Location = new System.Drawing.Point(26, 255);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(154, 25);
             this.gunaLabel3.TabIndex = 6;
             this.gunaLabel3.Text = "Ruta Archivo:";
             // 
-            // OrdenPago
+            // checkBox1
+            // 
+            this.checkBox1.Location = new System.Drawing.Point(512, 151);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(112, 17);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Busqueda Manual";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // chkConSubDir
+            // 
+            this.chkConSubDir.AutoSize = true;
+            this.chkConSubDir.Checked = true;
+            this.chkConSubDir.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkConSubDir.Location = new System.Drawing.Point(179, 151);
+            this.chkConSubDir.Name = "chkConSubDir";
+            this.chkConSubDir.Size = new System.Drawing.Size(122, 17);
+            this.chkConSubDir.TabIndex = 18;
+            this.chkConSubDir.Text = "Incluir subdirectorios";
+            this.chkConSubDir.UseVisualStyleBackColor = true;
+            // 
+            // chkIgnorarError
+            // 
+            this.chkIgnorarError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkIgnorarError.AutoSize = true;
+            this.chkIgnorarError.Checked = true;
+            this.chkIgnorarError.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkIgnorarError.Location = new System.Drawing.Point(330, 151);
+            this.chkIgnorarError.Name = "chkIgnorarError";
+            this.chkIgnorarError.Size = new System.Drawing.Size(147, 17);
+            this.chkIgnorarError.TabIndex = 19;
+            this.chkIgnorarError.Text = "Ignorar los avisos de error";
+            this.chkIgnorarError.UseVisualStyleBackColor = true;
+            // 
+            // SiDM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1287, 598);
+            this.ClientSize = new System.Drawing.Size(1287, 705);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.gunaElipsePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "OrdenPago";
+            this.Name = "SiDM";
             this.Text = "OrdenPago";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -362,20 +402,23 @@
 
         private System.Windows.Forms.Panel panel3;
         private Guna.UI.WinForms.GunaButton gBtnCloseForm;
-        private Guna.UI.WinForms.GunaButton gbtnDirectorio;
+        private Guna.UI.WinForms.GunaButton gbtnDirectorioSiDM;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaTextBox gTxtFiltro;
+        private Guna.UI.WinForms.GunaTextBox gTxtFiltroSiDM;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaTextBox gTxtDirectorio;
-        private Guna.UI.WinForms.GunaButton gBtnExcel;
-        private Guna.UI.WinForms.GunaButton gBtnLimpiarCajas;
-        private Guna.UI.WinForms.GunaButton gBtnImportarBD;
+        private Guna.UI.WinForms.GunaTextBox gTxtDirectorioSiDM;
+        private Guna.UI.WinForms.GunaButton gBtnExcelSiDM;
+        private Guna.UI.WinForms.GunaButton gBtnLimpiarCajasSiDM;
+        private Guna.UI.WinForms.GunaButton gBtnImportarBDSiDM;
         private System.Windows.Forms.DataGridView dtgvArchivos;
         private System.Windows.Forms.RichTextBox rTxtboxMostrarArchivos;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel lblTotalArchivos;
         private System.Windows.Forms.ListBox ltbArchivos;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkConSubDir;
+        private System.Windows.Forms.CheckBox chkIgnorarError;
     }
 }

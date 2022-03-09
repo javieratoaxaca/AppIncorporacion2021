@@ -12,7 +12,7 @@ namespace AppIncorporacion2021.Config
 
         public ConexionBD()
         {
-            cad_cnx = "Database=Incorporacion2021; Data Source=localhost;User id=root;password=oportunidades;";
+            cad_cnx = "Database=sidm; Data Source=localhost;User id=root;password=oportunidades;";
         }
         public MySqlConnection GetConnection()
         {

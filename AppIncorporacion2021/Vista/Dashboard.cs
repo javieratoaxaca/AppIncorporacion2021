@@ -147,6 +147,7 @@ namespace AppIncorporacion2021.Vista
             /*
                   Aqui va el codigo para las demas operaciones
                   */
+            abrirFormularioHijo(new zip());
             ocultarSubMenu();
         }
 

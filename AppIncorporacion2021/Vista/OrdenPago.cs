@@ -33,7 +33,7 @@ namespace AppIncorporacion2021.Vista
             string rutaarchivo = string.Empty;
             string linea;
             int lineatxt = 0;
-            string saveArchivo = @"F:\Respaldo_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + ".txt";
+            string saveArchivo = @"D:\Respaldo_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + ".txt";
 
             FolderBrowserDialog fbd = new FolderBrowserDialog();
 
@@ -84,7 +84,7 @@ namespace AppIncorporacion2021.Vista
 
         private DataTable ConvertirTxtDataTable(string path)
         {
-            DataTable dtDatos = new DataTable();
+            var dtDatos = new DataTable();
             int countRow = 0;
             int countColumns = 0;
             try
@@ -260,7 +260,7 @@ namespace AppIncorporacion2021.Vista
 
                     iR++;
                 }
-                sl.SaveAs(@"F:\Universo_Becarios_ACEMS.xlsx");
+                sl.SaveAs(@"D:\Universo_Becarios_ACEMS.xlsx");
                 MessageBox.Show("Se Guardo Archivo");
             }
             catch (Exception ex)

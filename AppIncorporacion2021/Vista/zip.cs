@@ -13,16 +13,17 @@ using AppIncorporacion2021.Modelo;
 using AppIncorporacion2021.Data;
 using SpreadsheetLight;
 using DocumentFormat.OpenXml.Spreadsheet;
+using Ionic.Zip;
 //using DocumentFormat.OpenXml.Spreadsheet;
 
 
 namespace AppIncorporacion2021.Vista
 {
-    public partial class SiDM : Form
+    public partial class zip : Form
     {
         int contador = 0; //me va servir para contar el numero de archivos txt que encuentra dentro de la ruta
 
-        public SiDM()
+        public zip()
         {
             InitializeComponent();
         }
@@ -33,7 +34,6 @@ namespace AppIncorporacion2021.Vista
             string rutaarchivo = string.Empty;
             string linea;
             int lineatxt = 0;
-            string saveArchivo = @"F:\Respaldo_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + ".txt";
 
             FolderBrowserDialog fbd = new FolderBrowserDialog();
 
@@ -41,50 +41,36 @@ namespace AppIncorporacion2021.Vista
             {
                 rutaDirectorio = fbd.SelectedPath;
             }
-            gTxtDirectorioSiDM.Text = rutaDirectorio;
+            gTxtDirectorio.Text = rutaDirectorio;
 
             if (rutaDirectorio.Trim()!=string.Empty)
             {
                 DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
-                //rtxtboxMostrarArchivo.AppendText();
-                StreamWriter sww = new StreamWriter(saveArchivo, true);
-                sww.WriteLine("CR_ID-BECARIO_FOLIO-FORMATO_FOLIO-ENCUESTA_FOLIO-VERIFICADOR\n");
-                sww.Close();
-
-                foreach (var item in di.GetFiles(gTxtFiltroSiDM.Text))
-                {
+                string targetDirectory = @"D:\RESPALDO_DMS\zip\open\";
+                
+                foreach (var item in di.GetFiles(gTxtFiltro.Text))
+                {              
                     ltbArchivos.Items.Add(item.Name);
                     rutaarchivo = rutaDirectorio + "\\" + item.Name;
                     contador++;
-                    using (StreamReader sr = new StreamReader(rutaarchivo))
+                    //El ZipFile lo obtengo de la Libreria de Ionic.zip 
+                    using (ZipFile zip = ZipFile.Read(rutaarchivo)) // lee el archivo de la ruta donde se encuentra el archivo zip
                     {
-
-                        // rtxtboxMostrarArchivo.AppendText(item.Name + "\n");
-                        while ((linea = sr.ReadLine()) != null)
+                        for (int i = 1; i <= rutaarchivo.Length; i++)
                         {
-
-                            rTxtboxMostrarArchivos.AppendText(linea + "_" + item.Name + "\n");
-                            StreamWriter sw = new StreamWriter(saveArchivo, true);
-                            sw.WriteLine(linea + "_" + item.Name + "\n");
-                            sw.Close();
-                            lineatxt++;
+                            zip.Password = "Op3r4t1v0zoi4--"; // Contraseña que tiene cada ZIP                      
+                            zip.ExtractAll(targetDirectory+"\\"+item.Name, ExtractExistingFileAction.DoNotOverwrite); //Aqui guarda la extraccion en conjunto con el nombre del zip, para que asi no sobre escriba el contenido en la misma carpeta
                         }
-
-                    }
-
+                    }    
                 }
-                //MessageBox.Show("Archivo Creado en ruta"+saveArchivo);
-                lblTotalArchivos.Text += contador + " y registros son:" + lineatxt;
-
-                dtgvArchivos.AutoGenerateColumns = true;
-                dtgvArchivos.DataSource = ConvertirTxtDataTable(saveArchivo);
+                lblTotalArchivos.Text += contador + " Se extragieron:" + contador + " ZIP's";
             }
         }
 
 
         private DataTable ConvertirTxtDataTable(string path)
         {
-            DataTable dtDatos = new DataTable();
+            var dtDatos = new DataTable();
             int countRow = 0;
             int countColumns = 0;
             try
@@ -102,7 +88,7 @@ namespace AppIncorporacion2021.Vista
                         }
                         if (countRow == 0)
                         {
-                            var obtenerColumns = lineasnew.Split('_');
+                            var obtenerColumns = lineasnew.Split('|');
                             countColumns = obtenerColumns.Length;
                             //dtDatos.Columns.Add()
                             foreach (string itemColumn in obtenerColumns)
@@ -114,7 +100,7 @@ namespace AppIncorporacion2021.Vista
                         }
                         else
                         {
-                            var obtenerRows = lineasnew.Split('_');
+                            var obtenerRows = lineasnew.Split('|');
                             if (string.IsNullOrEmpty(obtenerRows[0].Split('\r')[0].Trim()))
                             {
                                 continue;
@@ -144,24 +130,32 @@ namespace AppIncorporacion2021.Vista
         }
         private void EnviarMysqlBD()
         {
-            BecarioOrdenPago dtOrdenPago = new BecarioOrdenPago();
-            ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
+            apdmCaptura dtadpmCaptura = new apdmCaptura();
+            ModeloApdmCaptura smApdmCaptura = new ModeloApdmCaptura();
+            //ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
 
             try
             {
              
                     for (int i = 0; i < dtgvArchivos.RowCount; i++)
                     {
-                        dtOrdenPago.CodResultado = dtgvArchivos.Rows[i].Cells[0].Value.ToString();
-                        dtOrdenPago.BecarioId = Convert.ToInt32( dtgvArchivos.Rows[i].Cells[1].Value.ToString());
-                        dtOrdenPago.FolioFormato = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
-                        dtOrdenPago.FolioEncuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
-                        dtOrdenPago.FolioVerificador = dtgvArchivos.Rows[i].Cells[4].Value.ToString();
-                        smOrdenPago.setOrdenPago2(dtOrdenPago);
+                    dtadpmCaptura.Id_pregunta = dtgvArchivos.Rows[i].Cells[0].Value.ToString();
+                    dtadpmCaptura.Id_pregunta_anterior = dtgvArchivos.Rows[i].Cells[1].Value.ToString();
+                    dtadpmCaptura.Id_codigo_respuesta = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
+                    dtadpmCaptura.Codigo_respuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
+                    dtadpmCaptura.Respuesta = dtgvArchivos.Rows[i].Cells[4].Value.ToString();
+                    dtadpmCaptura.Iteracion = dtgvArchivos.Rows[i].Cells[5].Value.ToString();
+                    dtadpmCaptura.Iteracion_anidada = dtgvArchivos.Rows[i].Cells[6].Value.ToString();
+                    dtadpmCaptura.Iteracion_anterior = dtgvArchivos.Rows[i].Cells[7].Value.ToString();
+                    dtadpmCaptura.Iteracion_anidada_anterior = dtgvArchivos.Rows[i].Cells[8].Value.ToString();
+                    dtadpmCaptura.Folio_encuesta = dtgvArchivos.Rows[i].Cells[9].Value.ToString();
+                    dtadpmCaptura.Indice = dtgvArchivos.Rows[i].Cells[11].Value.ToString();
 
-                    }
-                    bool resultado = smOrdenPago.Procesar();
-                    MessageBox.Show(resultado ? "Se guardaron exitosamente" : "Error al guardar los datos");
+                    smApdmCaptura.setApdmCaptura(dtadpmCaptura);
+                }
+                // smApdmCaptura.setApdmCaptura(dtadpmCaptura);
+               // bool resultado = smApdmCaptura.proc();
+                  MessageBox.Show("Se guardaron exitosamente" );
                 
             }
             catch (Exception ex)
@@ -173,28 +167,6 @@ namespace AppIncorporacion2021.Vista
         private void gBtnImportarBD_Click(object sender, EventArgs e)
         {
             EnviarMysqlBD();
-            //BecarioOrdenPago dtOrdenPago = new BecarioOrdenPago();
-            //ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
-
-            //try
-            //{
-            //    for(int i=0;i<dtgvArchivos.RowCount;i++)
-            //    {
-            //        dtOrdenPago.CodResultado=dtgvArchivos.Rows[i].Cells[0].Value.ToString();
-            //        dtOrdenPago.BecarioId = Convert.ToInt32(dtgvArchivos.Rows[i].Cells[1].Value.ToString());
-            //        dtOrdenPago.FolioFormato = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
-            //        dtOrdenPago.FolioEncuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
-            //        dtOrdenPago.FolioVerificador = dtgvArchivos.Rows[i].Cells[4].Value.ToString();
-            //        smOrdenPago.setOrdenPago(dtOrdenPago);
-
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
         }
 
         private void gBtnExcel_Click(object sender, EventArgs e)
@@ -260,12 +232,66 @@ namespace AppIncorporacion2021.Vista
 
                     iR++;
                 }
-                sl.SaveAs(@"F:\Universo_Becarios_ACEMS.xlsx");
+                sl.SaveAs(@"D:\Universo_Becarios_ACEMS.xlsx");
                 MessageBox.Show("Se Guardo Archivo");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void gBtnExaminarTxts_Click(object sender, EventArgs e)
+        {
+            string rutaDirectorio = string.Empty;
+            string rutaarchivo = string.Empty;
+            string linea;
+            int lineatxt = 0;
+            string saveArchivo = @"D:\APDM_CAPTURA_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + ".txt";
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                rutaDirectorio = fbd.SelectedPath;
+            }
+            gTxtDirectorio.Text = rutaDirectorio;
+
+            if (rutaDirectorio.Trim() != string.Empty)
+            {
+                DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
+                //rtxtboxMostrarArchivo.AppendText();
+                StreamWriter sww = new StreamWriter(saveArchivo, true);
+                sww.WriteLine("\n");
+                sww.Close();
+                string filtro = "*.txt";
+                foreach (var item in di.GetFiles(filtro))
+                {
+                    ltbText.Items.Add(item.Name);
+                    rutaarchivo = rutaDirectorio + "\\" + item.Name;
+                    contador++;
+                    using (StreamReader sr = new StreamReader(rutaarchivo))
+                    {
+
+                        // rtxtboxMostrarArchivo.AppendText(item.Name + "\n");
+                        while ((linea = sr.ReadLine()) != null)
+                        {
+
+                            rTxtboxMostrarArchivos.AppendText(linea + "|" + "\n");
+                            StreamWriter sw = new StreamWriter(saveArchivo, true);
+                            sw.WriteLine(linea + "|" + "\n");
+                            sw.Close();
+                            lineatxt++;
+                        }
+
+                    }
+
+                }
+                //MessageBox.Show("Archivo Creado en ruta"+saveArchivo);
+                lblTotalArchivos.Text += contador + " y registros son:" + lineatxt;
+
+                dtgvArchivos.AutoGenerateColumns = true;
+                dtgvArchivos.DataSource = ConvertirTxtDataTable(saveArchivo);
             }
         }
     }

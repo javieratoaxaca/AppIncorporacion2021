@@ -52,6 +52,10 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\AppFamiliasIncorporacion\AppFamiliasIncorporacion\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\SIDM_V8_Agosto_2014\bin\MySql.Data.dll</HintPath>
     </Reference>
@@ -86,9 +90,11 @@
   <ItemGroup>
     <Compile Include="Config\ConexionBD.cs" />
     <Compile Include="Config\ConexionSQLite.cs" />
+    <Compile Include="Data\apdmCaptura.cs" />
     <Compile Include="Data\Becarios.cs" />
     <Compile Include="Data\Incorporacion.cs" />
     <Compile Include="Data\BecarioOrdenPago.cs" />
+    <Compile Include="Modelo\ModeloApdmCaptura.cs" />
     <Compile Include="Modelo\ModeloBecarios.cs" />
     <Compile Include="Modelo\ModeloIncorporacion.cs" />
     <Compile Include="Modelo\ModeloOrdenPago.cs" />
@@ -136,6 +142,18 @@
     <Compile Include="Vista\Metas.Designer.cs">
       <DependentUpon>Metas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\zip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\zip.Designer.cs">
+      <DependentUpon>zip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\SiDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\SiDM.Designer.cs">
+      <DependentUpon>SiDM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\OrdenPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +187,12 @@
     </Compile>
     <EmbeddedResource Include="Vista\Metas.resx">
       <DependentUpon>Metas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\zip.resx">
+      <DependentUpon>zip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\SiDM.resx">
+      <DependentUpon>SiDM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\OrdenPago.resx">
       <DependentUpon>OrdenPago.cs</DependentUpon>
