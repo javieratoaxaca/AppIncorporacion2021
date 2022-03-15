@@ -8,18 +8,25 @@ namespace AppIncorporacion2021.Config
     class ConexionBD
     {
         string cad_cnx;
-        MySqlConnection mysqlcnn;
+         MySqlConnection mysqlcnn ;
+
 
         public ConexionBD()
         {
+   
             cad_cnx = "Database=sidm; Data Source=localhost;User id=root;password=oportunidades;";
         }
         public MySqlConnection GetConnection()
         {
             try
             {
-                mysqlcnn = new MySqlConnection(cad_cnx);
-                mysqlcnn.Open();
+                
+                
+                    mysqlcnn = new MySqlConnection(cad_cnx);
+                    mysqlcnn.Open();
+                
+               // mysqlcnn.Open();
+          
             }
             catch (MySqlException ex)
             {
@@ -29,7 +36,6 @@ namespace AppIncorporacion2021.Config
             {
                 throw new Exception("Error: Al realizar la conexion la Base de datos." + ex.Message);
             }
-            
             return mysqlcnn;
         }
         public int ExecuteQuery(string SQL)
@@ -41,6 +47,7 @@ namespace AppIncorporacion2021.Config
                 MySqlCommand MySqlCommand = new MySqlCommand(SQL, GetConnection());
 
                 result = MySqlCommand.ExecuteNonQuery();
+                mysqlcnn.Close();
             }
             catch (MySqlException ex)
             {

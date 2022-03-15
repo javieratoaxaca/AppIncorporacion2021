@@ -8,9 +8,9 @@ using AppIncorporacion2021.Data;
 
 namespace AppIncorporacion2021.Modelo
 {
-    class ModeloApdmCaptura:Config.ConexionBD
+    class ModeloApdmCapturaCerm:Config.ConexionBD
     {
-        public ModeloApdmCaptura() { }
+        public ModeloApdmCapturaCerm() { }
 
         private string _addSQL;
         public string AddSQL
@@ -25,12 +25,12 @@ namespace AppIncorporacion2021.Modelo
 
             }
         }
-        public bool setApdmCaptura(apdmCaptura dtApdmCaptura)
+        public bool setApdmCapturaCerm(apdmCapturaCerm dtApdmCapturaCerm)
         {
 
-            string Query = string.Format("INSERT INTO apdm_captura (id_pregunta,id_pregunta_anterior,id_codigo_respuesta,codigo_respuesta,respuesta,iteracion,iteracion_anidada,iteracion_anterior,iteracion_anidada_anterior,folio_encuesta,indice)" +
+           string Query = string.Format("INSERT INTO apdm_captura_cerm(idPregunta,idPreguntaAnterior,idCodigoRespuesta,codigoRespuesta,respuesta,iteracion,iteracionAnidada,iteracionAnterior,iteracionAnidadaAnterior,folioEncuesta,indice)" +
                                          "VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
-                                        dtApdmCaptura.Id_pregunta,dtApdmCaptura.Id_pregunta_anterior,dtApdmCaptura.Id_codigo_respuesta,dtApdmCaptura.Codigo_respuesta,dtApdmCaptura.Respuesta,dtApdmCaptura.Iteracion,dtApdmCaptura.Iteracion_anidada,dtApdmCaptura.Iteracion_anterior,dtApdmCaptura.Iteracion_anidada_anterior,dtApdmCaptura.Folio_encuesta,dtApdmCaptura.Indice);
+                                        dtApdmCapturaCerm.Id_pregunta, dtApdmCapturaCerm.Id_pregunta_anterior, dtApdmCapturaCerm.Id_codigo_respuesta, dtApdmCapturaCerm.Codigo_respuesta, dtApdmCapturaCerm.Respuesta, dtApdmCapturaCerm.Iteracion, dtApdmCapturaCerm.Iteracion_anidada, dtApdmCapturaCerm.Iteracion_anterior, dtApdmCapturaCerm.Iteracion_anidada_anterior, dtApdmCapturaCerm.Folio_encuesta, dtApdmCapturaCerm.Indice);
             try
             {
                 int result = ExecuteQuery(Query);

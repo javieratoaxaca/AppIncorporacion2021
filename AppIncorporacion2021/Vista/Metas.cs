@@ -37,7 +37,7 @@ namespace AppIncorporacion2021.Vista
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = cnx.GetConnection();
                 comando.CommandText = "SELECT COUNT(FAMILIA_ID) as TOTALTUTORAS FROM nominainco";
-                MySqlDataReader mdr = comando.ExecuteReader();
+                /*MySqlDataReader mdr = comando.ExecuteReader();
                 //se comprueba si hay algun dato dispobible en la base de datos 
                 if (mdr.Read() == true)
                 {
@@ -46,7 +46,7 @@ namespace AppIncorporacion2021.Vista
                 else
                 {
                     MessageBox.Show("Datos no Encontrados");
-                }
+                }*/
             }
             catch (MySqlException ex) { MessageBox.Show(ex.Message); }
         }

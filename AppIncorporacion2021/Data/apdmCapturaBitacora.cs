@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppIncorporacion2021.Data
 {
-    class apdmCaptura
+    class apdmCapturaBitacora
     {
         private int idCaptura;
         private string id_pregunta;
