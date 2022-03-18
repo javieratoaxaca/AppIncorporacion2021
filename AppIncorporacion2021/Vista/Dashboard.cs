@@ -193,6 +193,11 @@ namespace AppIncorporacion2021.Vista
             abrirFormularioHijo(new Metas());
         }
 
+        private void gBtnSiDm_Click(object sender, EventArgs e)
+        {
+          
+        }
+
         private void pnlEncabezado_MouseDown(object sender, MouseEventArgs e)
         {
             m = 1;

@@ -41,6 +41,7 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.pnlSubMenuAdmin = new System.Windows.Forms.Panel();
+            this.gBtnSiDm = new Guna.UI.WinForms.GunaButton();
             this.gBtnSubMenuAdminJef = new Guna.UI.WinForms.GunaButton();
             this.gBtnSubMenuAdminEms = new Guna.UI.WinForms.GunaButton();
             this.gBtnSubMenuAdminBasica = new Guna.UI.WinForms.GunaButton();
@@ -56,7 +57,6 @@
             this.gBtnSubMenuBasica = new Guna.UI.WinForms.GunaButton();
             this.gBtnUniversos = new Guna.UI.WinForms.GunaButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.gBtnSiDm = new Guna.UI.WinForms.GunaButton();
             this.pnlEncabezado.SuspendLayout();
             this.pnlCentral.SuspendLayout();
             this.pnlMenuLateral.SuspendLayout();
@@ -231,6 +231,33 @@
             this.pnlSubMenuAdmin.Name = "pnlSubMenuAdmin";
             this.pnlSubMenuAdmin.Size = new System.Drawing.Size(240, 182);
             this.pnlSubMenuAdmin.TabIndex = 7;
+            // 
+            // gBtnSiDm
+            // 
+            this.gBtnSiDm.AnimationHoverSpeed = 0.07F;
+            this.gBtnSiDm.AnimationSpeed = 0.03F;
+            this.gBtnSiDm.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.gBtnSiDm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnSiDm.BorderSize = 1;
+            this.gBtnSiDm.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnSiDm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gBtnSiDm.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnSiDm.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.gBtnSiDm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gBtnSiDm.Image = global::AppIncorporacion2021.Properties.Resources.icons8_university_100px_1;
+            this.gBtnSiDm.ImageSize = new System.Drawing.Size(30, 30);
+            this.gBtnSiDm.Location = new System.Drawing.Point(0, 130);
+            this.gBtnSiDm.Name = "gBtnSiDm";
+            this.gBtnSiDm.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gBtnSiDm.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gBtnSiDm.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnSiDm.OnHoverImage = null;
+            this.gBtnSiDm.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnSiDm.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.gBtnSiDm.Size = new System.Drawing.Size(240, 35);
+            this.gBtnSiDm.TabIndex = 3;
+            this.gBtnSiDm.Text = "Sis. Info. Dm";
+            this.gBtnSiDm.Click += new System.EventHandler(this.gBtnSiDm_Click);
             // 
             // gBtnSubMenuAdminJef
             // 
@@ -584,32 +611,6 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(240, 100);
             this.pnlLogo.TabIndex = 0;
-            // 
-            // gBtnSiDm
-            // 
-            this.gBtnSiDm.AnimationHoverSpeed = 0.07F;
-            this.gBtnSiDm.AnimationSpeed = 0.03F;
-            this.gBtnSiDm.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            this.gBtnSiDm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnSiDm.BorderSize = 1;
-            this.gBtnSiDm.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnSiDm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gBtnSiDm.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnSiDm.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gBtnSiDm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gBtnSiDm.Image = global::AppIncorporacion2021.Properties.Resources.icons8_university_100px_1;
-            this.gBtnSiDm.ImageSize = new System.Drawing.Size(30, 30);
-            this.gBtnSiDm.Location = new System.Drawing.Point(0, 130);
-            this.gBtnSiDm.Name = "gBtnSiDm";
-            this.gBtnSiDm.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gBtnSiDm.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gBtnSiDm.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnSiDm.OnHoverImage = null;
-            this.gBtnSiDm.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnSiDm.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.gBtnSiDm.Size = new System.Drawing.Size(240, 35);
-            this.gBtnSiDm.TabIndex = 3;
-            this.gBtnSiDm.Text = "Sis. Info. Dm";
             // 
             // Dashboard
             // 

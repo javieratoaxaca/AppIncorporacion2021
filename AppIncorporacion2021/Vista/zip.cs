@@ -16,12 +16,11 @@ namespace AppIncorporacion2021.Vista
     public partial class zip : Form
     {
         int contador = 0; //me va servir para contar el numero de archivos txt que encuentra dentro de la ruta
-
+        int indice = 0;
         public zip()
         {
             InitializeComponent();
         }
-
         private void gbtnDirectorio_Click(object sender, EventArgs e)
         {
             string rutaDirectorio = string.Empty;
@@ -40,7 +39,7 @@ namespace AppIncorporacion2021.Vista
             if (rutaDirectorio.Trim() != string.Empty)
             {
                 DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
-                string targetDirectory = @"D:\RESPALDO_DMS\zip\open\";
+                string targetDirectory = @"D:\open\";
 
                 foreach (var item in di.GetFiles(gTxtFiltro.Text))
                 {
@@ -60,7 +59,6 @@ namespace AppIncorporacion2021.Vista
                 lblTotalArchivos.Text += contador + " Se extragieron:" + contador + " ZIP's";
             }
         }
-
         private DataTable ConvertirTxtDataTable(string path)
         {
             var dtDatos = new DataTable();
@@ -121,7 +119,6 @@ namespace AppIncorporacion2021.Vista
             }
 
         }
-
         /*Metodo para enviar los datos del archivo txt de APDM_CAPTURA en la tabla de apdm_captura_bitacora*/
         private void EnviarMysqlBDBitacora()
         {
@@ -193,6 +190,41 @@ namespace AppIncorporacion2021.Vista
             }
         }
 
+        /*Metodo para enviar los datos del archivo txt de APDM_CAPTURA en la tabla de apdm_captura_odp*/
+        private void EnviarMysqlBDOdp()
+        {
+            apdmCapturaOdp dtadpmCapturaOdp = new apdmCapturaOdp();
+            ModeloApdmCapturaOdp smApdmCapturaOdp = new ModeloApdmCapturaOdp();
+            //ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
+
+            try
+            {
+                for (int i = 0; i <= dtgvArchivos.RowCount; i++)
+                {
+
+                    dtadpmCapturaOdp.Id_pregunta = dtgvArchivos.Rows[i].Cells[0].Value.ToString();
+                    dtadpmCapturaOdp.Id_pregunta_anterior = dtgvArchivos.Rows[i].Cells[1].Value.ToString();
+                    dtadpmCapturaOdp.Id_codigo_respuesta = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
+                    dtadpmCapturaOdp.Codigo_respuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
+                    dtadpmCapturaOdp.Respuesta = dtgvArchivos.Rows[i].Cells[4].Value.ToString();
+                    dtadpmCapturaOdp.Iteracion = dtgvArchivos.Rows[i].Cells[5].Value.ToString();
+                    dtadpmCapturaOdp.Iteracion_anidada = dtgvArchivos.Rows[i].Cells[6].Value.ToString();
+                    dtadpmCapturaOdp.Iteracion_anterior = dtgvArchivos.Rows[i].Cells[7].Value.ToString();
+                    dtadpmCapturaOdp.Iteracion_anidada_anterior = dtgvArchivos.Rows[i].Cells[8].Value.ToString();
+                    dtadpmCapturaOdp.Folio_encuesta = dtgvArchivos.Rows[i].Cells[9].Value.ToString();
+                    dtadpmCapturaOdp.Indice = dtgvArchivos.Rows[i].Cells[10].Value.ToString();
+
+                    smApdmCapturaOdp.setApdmCapturaOdp(dtadpmCapturaOdp);
+                }
+                bool resultado = smApdmCapturaOdp.Procesar();
+                MessageBox.Show(resultado ? "Se guardaron exitosamente" : "Error al guardar los datos");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         /* *Metodo para enviar los datos del archivo txt de APDM_CAPTURA en la tabla de apdm_resumen_encuesta_bitacora*/
         private void EnviarBdApdmResumenBitacora()
         {
@@ -271,7 +303,45 @@ namespace AppIncorporacion2021.Vista
                 MessageBox.Show(ex.Message);
             }
         }
+        /* *Metodo para enviar los datos del archivo txt de APDM_CAPTURA en la tabla de apdm_resumen_encuesta_odp*/
+        private void EnviarBdApdmResumenOdp()
+        {
+            apdmResumenCapturaOdp dtadpmResCapturaOdp = new apdmResumenCapturaOdp();
+            ModeloApdmResumenCapturaOdp smApdmResCapturaOdp = new ModeloApdmResumenCapturaOdp();
+            //ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
 
+            try
+            {
+                for (int i = 0; i <= dtgvArchivos.RowCount; i++)
+                {
+                    dtadpmResCapturaOdp.Folio_encuesta = dtgvArchivos.Rows[i].Cells[0].Value.ToString();
+                    dtadpmResCapturaOdp.IdEncuesta = dtgvArchivos.Rows[i].Cells[1].Value.ToString();
+                    dtadpmResCapturaOdp.IdProceso = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
+                    dtadpmResCapturaOdp.Cupo = dtgvArchivos.Rows[i].Cells[6].Value.ToString();
+                    dtadpmResCapturaOdp.UsuarioCapturaDm = dtgvArchivos.Rows[i].Cells[7].Value.ToString();
+                    dtadpmResCapturaOdp.HoraInicio = dtgvArchivos.Rows[i].Cells[8].Value.ToString();
+                    dtadpmResCapturaOdp.HoraFin = dtgvArchivos.Rows[i].Cells[9].Value.ToString();
+                    dtadpmResCapturaOdp.FechaCaptura = dtgvArchivos.Rows[i].Cells[10].Value.ToString();
+                    dtadpmResCapturaOdp.IdEstado = dtgvArchivos.Rows[i].Cells[11].Value.ToString();
+                    dtadpmResCapturaOdp.IdMunicipio = dtgvArchivos.Rows[i].Cells[12].Value.ToString();
+                    dtadpmResCapturaOdp.CveLocalidad = dtgvArchivos.Rows[i].Cells[13].Value.ToString();
+                    dtadpmResCapturaOdp.CveAgeb = dtgvArchivos.Rows[i].Cells[15].Value.ToString();
+                    dtadpmResCapturaOdp.IdAgeb = dtgvArchivos.Rows[i].Cells[16].Value.ToString();
+                    dtadpmResCapturaOdp.GpsLongitud = dtgvArchivos.Rows[i].Cells[25].Value.ToString();
+                    dtadpmResCapturaOdp.GpsLatitud = dtgvArchivos.Rows[i].Cells[26].Value.ToString();
+
+
+                    smApdmResCapturaOdp.setApdmResCapturaOdp(dtadpmResCapturaOdp);
+                }
+                bool resultado = smApdmResCapturaOdp.Procesar();
+                MessageBox.Show(resultado ? "Se guardaron exitosamente" : "Error al guardar los datos");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void gBtnImportarBD_Click(object sender, EventArgs e)
         {
             EnviarMysqlBDBitacora();
@@ -587,5 +657,214 @@ namespace AppIncorporacion2021.Vista
         {
             EnviarBdApdmResumenCerm();
         }
+
+
+        private void zip_Load(object sender, EventArgs e)
+        {
+            gcmbProceso.Items.Add("Seleccione un Producto");
+            gcmbProceso.Items.Add("BITACORA");
+            gcmbProceso.Items.Add("ENTREGA_MEDIOS");
+            gcmbProceso.Items.Add("ODP_MAT");
+            gcmbProceso.SelectedIndex = 0;
+            btnVisibleFalseBitacora();
+            btnVisibleFalseCerm();
+            btnVisibleFalseOdp();
+
+        }
+        private void btnVisibleFalseBitacora()
+        {
+            gBtnExaminarTxts.Visible = false;
+            gBtnTxtResumen.Visible = false;
+            gBtnImportarBD.Visible = false;
+            gBtnBDResumen.Visible = false;
+        }
+        private void btnVisibleTrueBitacora()
+        {
+            gBtnExaminarTxts.Visible = true;
+            gBtnTxtResumen.Visible = true;
+            gBtnImportarBD.Visible = true;
+            gBtnBDResumen.Visible = true;
+        }
+        private void btnVisibleFalseCerm() {
+            gBtnExaminarCermTxt.Visible = false;
+            gBtnImportarBDCerm.Visible = false;
+            gBtnTxtResumenCerm.Visible = false;
+            gBtnBDResumenCerm.Visible = false;
+        }
+        private void btnVisibleTrueCerm() {
+            gBtnExaminarCermTxt.Visible = true;
+            gBtnImportarBDCerm.Visible = true;
+            gBtnTxtResumenCerm.Visible = true;
+            gBtnBDResumenCerm.Visible = true;
+        }
+        private void btnVisibleFalseOdp()
+        {
+            gbtnExaminarCapturaOPD.Visible = false;
+            gbtnImportarCapturaOPD.Visible = false;
+            gbtnExaminarResumenCapturaOPD.Visible = false;
+            gbtnImportarResumenCapturaOPD.Visible = false;
+        }
+        private void btnVisibleTrueOdp()
+        {
+            gbtnExaminarCapturaOPD.Visible = true;
+            gbtnImportarCapturaOPD.Visible = true;
+            gbtnExaminarResumenCapturaOPD.Visible = true;
+            gbtnImportarResumenCapturaOPD.Visible = true;
+        }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void gcmbProceso_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            indice = gcmbProceso.SelectedIndex;
+            switch (indice)
+            {
+                case 1:
+                    btnVisibleTrueBitacora();
+                    btnVisibleFalseCerm();
+                    btnVisibleFalseOdp();
+                    break;
+                case 2:
+                    btnVisibleFalseBitacora();
+                    btnVisibleTrueCerm();
+                    btnVisibleFalseOdp();
+                 break;
+                case 3:
+                    btnVisibleFalseBitacora();
+                    btnVisibleFalseCerm();
+                    btnVisibleTrueOdp();
+                break;
+                default:
+                    break;
+            }
+        }
+
+        private void gbtnExaminarCapturaOPD_Click(object sender, EventArgs e)
+        {
+            /* string itemcmb = cmbProceso.Text;
+             Console.Write(itemcmb);
+             lblcmbProceso.Text = itemcmb;
+             if(cmbProceso.SelectedItem.ToString() == "Bitacora")
+             {*/
+
+            string rutaDirectorio = string.Empty;
+            string rutaarchivo = string.Empty;
+            string linea;
+            int lineatxt = 0;
+            string saveArchivo = @"D:\APDM_CAPTURA_ODP" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + ".txt";
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                rutaDirectorio = fbd.SelectedPath;
+            }
+            gTxtDirectorio.Text = rutaDirectorio;
+
+            if (rutaDirectorio.Trim() != string.Empty)
+            {
+                DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
+                //rtxtboxMostrarArchivo.AppendText();
+                StreamWriter sww = new StreamWriter(saveArchivo, true);
+                sww.WriteLine("\n");
+                sww.Close();
+                string filtro = "*.txt";
+                foreach (var item in di.GetFiles(filtro))
+                {
+                    ltbText.Items.Add(item.Name);
+                    rutaarchivo = rutaDirectorio + "\\" + item.Name;
+                    contador++;
+                    using (StreamReader sr = new StreamReader(rutaarchivo))
+                    {
+
+                        // rtxtboxMostrarArchivo.AppendText(item.Name + "\n");
+                        while ((linea = sr.ReadLine()) != null)
+                        {
+
+                            rTxtboxMostrarArchivos.AppendText(linea + "|" + "\n");
+                            StreamWriter sw = new StreamWriter(saveArchivo, true);
+                            sw.WriteLine(linea + "|" + "\n");
+                            sw.Close();
+                            lineatxt++;
+                        }
+
+                    }
+
+                }
+                //MessageBox.Show("Archivo Creado en ruta"+saveArchivo);
+                lblTotalArchivos.Text += contador + " y registros son:" + lineatxt;
+
+                dtgvArchivos.AutoGenerateColumns = true;
+                dtgvArchivos.DataSource = ConvertirTxtDataTable(saveArchivo);
+            }
+        }
+
+        private void gbtnExaminarResumenCapturaOPD_Click(object sender, EventArgs e)
+        {
+            ltbText.Text = "";
+            //dtgvArchivos.Rows.Clear();
+            string rutaDirectorio = string.Empty;
+            string rutaarchivo = string.Empty;
+            string linea;
+            int lineatxt = 0;
+            string saveArchivo = @"D:\APDM_RESUMEN_CAPTURA_ODP" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + ".txt";
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                rutaDirectorio = fbd.SelectedPath;
+            }
+            gTxtDirectorio.Text = rutaDirectorio;
+
+            if (rutaDirectorio.Trim() != string.Empty)
+            {
+                DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
+                //rtxtboxMostrarArchivo.AppendText();
+                StreamWriter sww = new StreamWriter(saveArchivo, true);
+                sww.WriteLine("\n");
+                sww.Close();
+                string filtro = "*.txt";
+                foreach (var item in di.GetFiles(filtro))
+                {
+                    ltbText.Items.Add(item.Name);
+                    rutaarchivo = rutaDirectorio + "\\" + item.Name;
+                    contador++;
+                    using (StreamReader sr = new StreamReader(rutaarchivo))
+                    {
+
+                        // rtxtboxMostrarArchivo.AppendText(item.Name + "\n");
+                        while ((linea = sr.ReadLine()) != null)
+                        {
+
+                            rTxtboxMostrarArchivos.AppendText(linea + "|" + "\n");
+                            StreamWriter sw = new StreamWriter(saveArchivo, true);
+                            sw.WriteLine(linea + "|" + "\n");
+                            sw.Close();
+                            lineatxt++;
+                        }
+
+                    }
+
+                }
+                //MessageBox.Show("Archivo Creado en ruta"+saveArchivo);
+                lblTotalArchivos.Text += contador + " y registros son:" + lineatxt;
+
+                dtgvArchivos.AutoGenerateColumns = true;
+                dtgvArchivos.DataSource = ConvertirTxtDataTable(saveArchivo);
+            }
+        }
+
+        private void gbtnImportarResumenCapturaOPD_Click(object sender, EventArgs e)
+        {
+            EnviarBdApdmResumenOdp();
+        }
+
+        private void gbtnImportarCapturaOPD_Click(object sender, EventArgs e)
+        {
+            EnviarMysqlBDOdp();
+        }
     } 
-}
+}   

@@ -90,14 +90,18 @@
   <ItemGroup>
     <Compile Include="Config\ConexionBD.cs" />
     <Compile Include="Config\ConexionSQLite.cs" />
+    <Compile Include="Data\apdmCapturaOdp.cs" />
     <Compile Include="Data\apdmCapturaCerm.cs" />
+    <Compile Include="Data\apdmResumenCapturaOdp.cs" />
     <Compile Include="Data\apdmResumenCapturaCerm.cs" />
     <Compile Include="Data\apdmResumenCapturaBitacora.cs" />
     <Compile Include="Data\apdmCapturaBitacora.cs" />
     <Compile Include="Data\Becarios.cs" />
     <Compile Include="Data\Incorporacion.cs" />
     <Compile Include="Data\BecarioOrdenPago.cs" />
+    <Compile Include="Modelo\ModeloApdmCapturaOdp.cs" />
     <Compile Include="Modelo\ModeloApdmCapturaCerm.cs" />
+    <Compile Include="Modelo\ModeloApdmResumenCapturaOdp.cs" />
     <Compile Include="Modelo\ModeloApdmResumenCapturaCerm.cs" />
     <Compile Include="Modelo\ModeloApdmResumenCapturaBitacora.cs" />
     <Compile Include="Modelo\ModeloApdmCapturaBitacora.cs" />
