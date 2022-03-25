@@ -88,3 +88,4 @@ J:\RESPALDO_UNIDADD\Documentos\visual_studio\vst_2015\Projects\AppIncorporacion2
 J:\RESPALDO_UNIDADD\Documentos\visual_studio\vst_2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.csproj.GenerateResource.Cache
 D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.zip.resources
 D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\bin\Debug\Ionic.Zip.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppIncorporacion2021\AppIncorporacion2021\obj\Debug\AppIncorporacion2021.Vista.UniversoOdpBasica.resources

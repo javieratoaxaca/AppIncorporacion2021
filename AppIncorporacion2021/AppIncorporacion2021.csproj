@@ -106,6 +106,7 @@
     <Compile Include="Modelo\ModeloApdmResumenCapturaBitacora.cs" />
     <Compile Include="Modelo\ModeloApdmCapturaBitacora.cs" />
     <Compile Include="Modelo\ModeloBecarios.cs" />
+    <Compile Include="Modelo\ModeloUniversoOdpBasica.cs" />
     <Compile Include="Modelo\ModeloIncorporacion.cs" />
     <Compile Include="Modelo\ModeloOrdenPago.cs" />
     <Compile Include="Vista\CargarExcel.cs">
@@ -152,6 +153,12 @@
     <Compile Include="Vista\Metas.Designer.cs">
       <DependentUpon>Metas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\UniversoOdpBasica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\UniversoOdpBasica.Designer.cs">
+      <DependentUpon>UniversoOdpBasica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\zip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\Metas.resx">
       <DependentUpon>Metas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\UniversoOdpBasica.resx">
+      <DependentUpon>UniversoOdpBasica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\zip.resx">
       <DependentUpon>zip.cs</DependentUpon>

@@ -10,7 +10,7 @@ namespace AppIncorporacion2021.Data
     {
         int idOrdenPago;
         string codResultado;
-        int becarioId;
+        string becarioId;
         string folioFormato;
         string folioEncuesta;
         string folioVerificador;
@@ -41,7 +41,7 @@ namespace AppIncorporacion2021.Data
             }
         }
 
-        public int BecarioId
+        public string BecarioId
         {
             get
             {

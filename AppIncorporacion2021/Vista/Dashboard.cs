@@ -73,7 +73,7 @@ namespace AppIncorporacion2021.Vista
         #region SubmenuUniverso
         private void gBtnSubMenuBasica_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Main());
+            abrirFormularioHijo(new UniversoOdpBasica());
             
             /*
                     Aqui va el codigo para las demas operaciones

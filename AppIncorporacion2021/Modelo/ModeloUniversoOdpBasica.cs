@@ -10,10 +10,10 @@ using System.Data;
 
 namespace AppIncorporacion2021.Modelo
 {
-    class ModeloIncorporacion : Config.ConexionBD
+    class ModeloUniversoOdpBasica : Config.ConexionBD
     {
         //creamos el constructor
-        public ModeloIncorporacion() { }
+        public ModeloUniversoOdpBasica() { }
         #region CargarGridMain 
         public void CargarGrid(DataGridView grid)
         {
@@ -21,7 +21,7 @@ namespace AppIncorporacion2021.Modelo
             try
             {
 
-                string query = string.Format("SELECT * FROM nominainco ORDER BY REGION ");//creamos la consulta a la base 
+                string query = string.Format("SELECT idRegion AS IDREGION,nomRegion as REGION,cveOfiLocalidad as CLAVE_OFICIAL,cveMunicipio as CLAVE_MUN,nomMunicipio as MUNICIPIO,cveLocalidad as CLAVE_LOC,"+ "nomLocalidad as LOCALIDAD,idIntegrante as ID_INTEGRANTE,idFamilia as ID_FAMILIA,nomTutora as TUTORA,apPatTutora as PATERNO_TUTORA,apMatTutora as MATERNO_TUTORA,nomLiquidadora as LIQUIDADORA,modalidad as MODALIDAD,bimPago as BIMESTRE_PAGO,folioFormato as FORMATO,remesa as REMESA FROM universo_odps_basica ORDER BY idRegion ");//creamos la consulta a la base 
                 //creamos el cmd para que se lleve el query y cargue la conexion con la DB
                 MySqlCommand cmd = new MySqlCommand(query, GetConnection());
 
@@ -41,7 +41,57 @@ namespace AppIncorporacion2021.Modelo
 
         }
         #endregion
+        public DataTable CargarCmbRegion()
+        {
 
+
+            try
+            {
+
+                string query = string.Format("SELECT idRegion,nomRegion FROM regiones");//creamos la consulta a la base 
+                //creamos el cmd para que se lleve el query y cargue la conexion con la DB
+                MySqlCommand cmd = new MySqlCommand(query, GetConnection());
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+           
+        }
+        public void CargarGridRegion(DataGridView grid, int idRegion)
+        {
+            
+
+            try
+            {
+
+                string query = string.Format("SELECT idRegion AS IDREGION,nomRegion as REGION,cveOfiLocalidad as CLAVE_OFICIAL,cveMunicipio as CLAVE_MUN,nomMunicipio as MUNICIPIO,cveLocalidad as CLAVE_LOC," + "nomLocalidad as LOCALIDAD,idIntegrante as ID_INTEGRANTE,idFamilia as ID_FAMILIA,nomTutora as TUTORA,apPatTutora as PATERNO_TUTORA,apMatTutora as MATERNO_TUTORA,nomLiquidadora as LIQUIDADORA,modalidad as MODALIDAD,bimPago as BIMESTRE_PAGO,folioFormato as FORMATO,remesa as REMESA FROM universo_odps_basica where idRegion='{0}'",idRegion);//creamos la consulta a la base 
+                //creamos el cmd para que se lleve el query y cargue la conexion con la DB
+                MySqlCommand cmd = new MySqlCommand(query, GetConnection());
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+              grid.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
         #region CargarGridBuscar
         //public List<Object> consulta(string dato)
         //{

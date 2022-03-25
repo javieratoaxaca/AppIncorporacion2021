@@ -48,7 +48,7 @@ namespace AppIncorporacion2021.Vista
                 DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
                 //rtxtboxMostrarArchivo.AppendText();
                 StreamWriter sww = new StreamWriter(saveArchivo, true);
-                sww.WriteLine("CR_ID-BECARIO_FOLIO-FORMATO_FOLIO-ENCUESTA_FOLIO-VERIFICADOR\n");
+                sww.WriteLine("ID-BECARIO_FOLIO-FORMATO_FOLIO-ENCUESTA_FOLIO-VERIFICADOR\n");
                 sww.Close();
 
                 foreach (var item in di.GetFiles(gTxtFiltro.Text))
@@ -142,7 +142,7 @@ namespace AppIncorporacion2021.Vista
             }
 
         }
-        private void EnviarMysqlBD()
+        private void importarODPBd()
         {
             BecarioOrdenPago dtOrdenPago = new BecarioOrdenPago();
             ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
@@ -152,11 +152,11 @@ namespace AppIncorporacion2021.Vista
              
                     for (int i = 0; i < dtgvArchivos.RowCount; i++)
                     {
-                        dtOrdenPago.CodResultado = dtgvArchivos.Rows[i].Cells[0].Value.ToString();
-                        dtOrdenPago.BecarioId = Convert.ToInt32( dtgvArchivos.Rows[i].Cells[1].Value.ToString());
-                        dtOrdenPago.FolioFormato = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
-                        dtOrdenPago.FolioEncuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
-                        dtOrdenPago.FolioVerificador = dtgvArchivos.Rows[i].Cells[4].Value.ToString();
+                       // dtOrdenPago.CodResultado = "101";//dtgvArchivos.Rows[i].Cells[0].Value.ToString();
+                        dtOrdenPago.BecarioId =  dtgvArchivos.Rows[i].Cells[0].Value.ToString();
+                        dtOrdenPago.FolioFormato = dtgvArchivos.Rows[i].Cells[1].Value.ToString();
+                        dtOrdenPago.FolioEncuesta = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
+                        dtOrdenPago.FolioVerificador = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
                         smOrdenPago.setOrdenPago2(dtOrdenPago);
 
                     }
@@ -172,29 +172,7 @@ namespace AppIncorporacion2021.Vista
         
         private void gBtnImportarBD_Click(object sender, EventArgs e)
         {
-            EnviarMysqlBD();
-            //BecarioOrdenPago dtOrdenPago = new BecarioOrdenPago();
-            //ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
-
-            //try
-            //{
-            //    for(int i=0;i<dtgvArchivos.RowCount;i++)
-            //    {
-            //        dtOrdenPago.CodResultado=dtgvArchivos.Rows[i].Cells[0].Value.ToString();
-            //        dtOrdenPago.BecarioId = Convert.ToInt32(dtgvArchivos.Rows[i].Cells[1].Value.ToString());
-            //        dtOrdenPago.FolioFormato = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
-            //        dtOrdenPago.FolioEncuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
-            //        dtOrdenPago.FolioVerificador = dtgvArchivos.Rows[i].Cells[4].Value.ToString();
-            //        smOrdenPago.setOrdenPago(dtOrdenPago);
-
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
+            importarODPBd();
         }
 
         private void gBtnExcel_Click(object sender, EventArgs e)

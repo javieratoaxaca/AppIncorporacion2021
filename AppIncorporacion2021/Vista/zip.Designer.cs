@@ -560,6 +560,7 @@
             this.gunaLabel2.Size = new System.Drawing.Size(99, 25);
             this.gunaLabel2.TabIndex = 5;
             this.gunaLabel2.Text = "FILTRO:";
+            this.gunaLabel2.Click += new System.EventHandler(this.gunaLabel2_Click);
             // 
             // gTxtFiltro
             // 

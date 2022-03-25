@@ -26,11 +26,29 @@ namespace AppIncorporacion2021.Modelo
 
             }
         }
-        public void setOrdenPago2(BecarioOrdenPago dtOrdenPago)
+        public bool setOrdenPago2(BecarioOrdenPago dtOrdenPago)
         {
-            AddSQL += string.Format("INSERT INTO ordenpago (codResultado,becarioId,folioFormato,folioEncuesta,folioVerificador)" +
+            string Query = string.Format("INSERT INTO ordenpago (codResultado,becarioId,folioFormato,folioEncuesta,folioVerificador)" +
                                          "VALUES('{0}','{1}','{2}','{3}','{4}'); ",
-                                         dtOrdenPago.CodResultado, dtOrdenPago.BecarioId, dtOrdenPago.FolioFormato, dtOrdenPago.FolioEncuesta, dtOrdenPago.FolioVerificador);
+                                         dtOrdenPago.CodResultado="101", 
+                                         dtOrdenPago.BecarioId,
+                                         dtOrdenPago.FolioFormato, 
+                                         dtOrdenPago.FolioEncuesta, 
+                                         dtOrdenPago.FolioVerificador);
+            try
+            {
+                int result = ExecuteQuery(Query);
+                if (result > 0)
+                    return true;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+            return false;
         }
         public bool Procesar()
         {
@@ -49,7 +67,7 @@ namespace AppIncorporacion2021.Modelo
 
             return false;
         }
-        public bool setOrdenPago(BecarioOrdenPago dtOrdenPago)
+       /* public bool setOrdenPago(BecarioOrdenPago dtOrdenPago)
         {
 
             string Query = string.Format("INSERT INTO ordenpago (codResultado,becarioId,folioFormato,folioEncuesta,folioVerificador)" +
@@ -85,6 +103,6 @@ namespace AppIncorporacion2021.Modelo
                 throw new Exception(ex.Message); 
             }
         }
-
+        */
     }
 }

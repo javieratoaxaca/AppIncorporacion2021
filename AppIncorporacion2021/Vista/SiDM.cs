@@ -153,7 +153,7 @@ namespace AppIncorporacion2021.Vista
                     for (int i = 0; i < dtgvArchivos.RowCount; i++)
                     {
                         dtOrdenPago.CodResultado = dtgvArchivos.Rows[i].Cells[0].Value.ToString();
-                        dtOrdenPago.BecarioId = Convert.ToInt32( dtgvArchivos.Rows[i].Cells[1].Value.ToString());
+                        dtOrdenPago.BecarioId =  dtgvArchivos.Rows[i].Cells[1].Value.ToString();
                         dtOrdenPago.FolioFormato = dtgvArchivos.Rows[i].Cells[2].Value.ToString();
                         dtOrdenPago.FolioEncuesta = dtgvArchivos.Rows[i].Cells[3].Value.ToString();
                         dtOrdenPago.FolioVerificador = dtgvArchivos.Rows[i].Cells[4].Value.ToString();

@@ -16,5 +16,10 @@ namespace AppIncorporacion2021.Vista
         {
             InitializeComponent();
         }
+
+        private void DetallesIncorporacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

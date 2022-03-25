@@ -46,6 +46,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetallesIncorporacion";
             this.Text = "DetallesIncorporacion";
+            this.Load += new System.EventHandler(this.DetallesIncorporacion_Load);
             this.ResumeLayout(false);
 
         }

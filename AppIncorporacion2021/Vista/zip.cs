@@ -39,7 +39,7 @@ namespace AppIncorporacion2021.Vista
             if (rutaDirectorio.Trim() != string.Empty)
             {
                 DirectoryInfo di = new DirectoryInfo(@rutaDirectorio);
-                string targetDirectory = @"D:\open\";
+                string targetDirectory = @"D:\RESPALDO_DMS\zip\open";
 
                 foreach (var item in di.GetFiles(gTxtFiltro.Text))
                 {
@@ -865,6 +865,11 @@ namespace AppIncorporacion2021.Vista
         private void gbtnImportarCapturaOPD_Click(object sender, EventArgs e)
         {
             EnviarMysqlBDOdp();
+        }
+
+        private void gunaLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }   
