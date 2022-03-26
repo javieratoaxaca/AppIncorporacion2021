@@ -24,15 +24,18 @@ namespace AppIncorporacion2021.Vista
         int idRegion = 0;
         int contador = 0; //me va servir para contar el numero de archivos txt que encuentra dentro de la ruta
         ModeloUniversoOdpBasica smUniversoOdpBasica;
+        ModeloOrdenPago smOdpBasica;
         public UniversoOdpBasica()
         {
             InitializeComponent();
             smUniversoOdpBasica = new ModeloUniversoOdpBasica();
+            smOdpBasica = new ModeloOrdenPago();
         }
 
         private void UniversoOdpBasica_Load(object sender, EventArgs e)
         {
             smUniversoOdpBasica.CargarGrid(gdtgUniversoOdpBasica);
+            smOdpBasica.CargarGridOdp(gdtgOdpCapturado);
             gcmbRegion.DataSource = smUniversoOdpBasica.CargarCmbRegion();
             gcmbRegion.DisplayMember = "nomRegion";
             gcmbRegion.ValueMember = "idRegion";
@@ -113,6 +116,20 @@ namespace AppIncorporacion2021.Vista
             }
         }
 
-       
+        private void gTxtBuscarODP_TextChanged(object sender, EventArgs e)
+        {
+            if (gTxtBuscarODP.Text != "")
+                smUniversoOdpBasica.CargarGridBuscar(gdtgUniversoOdpBasica,gTxtBuscarODP.Text);
+            else
+                smUniversoOdpBasica.CargarGrid(gdtgUniversoOdpBasica);
+        }
+
+        private void gTxtOdpCapturado_TextChanged(object sender, EventArgs e)
+        {
+            if (gTxtOdpCapturado.Text != "")
+                smOdpBasica.CargarGridBuscarOdp(gdtgOdpCapturado,gTxtOdpCapturado.Text);
+            else
+                smOdpBasica.CargarGridOdp(gdtgOdpCapturado);
+        }
     }
 }

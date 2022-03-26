@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
-
+using System.Windows.Forms;
 using AppIncorporacion2021.Data;
 
 
@@ -24,6 +24,56 @@ namespace AppIncorporacion2021.Modelo
             {
                 _addSQL = value;
 
+            }
+        }
+
+        public void CargarGridOdp(DataGridView grid)
+        {
+
+
+            try
+            {
+
+                string query = string.Format("SELECT folioEncuesta as FOLIO_ENCUESTA, becarioId as ID_BECARIO, folioFormato as FOLIO_FORMATO, codResultado as CODIGO_RESULTADO FROM ordenpago ");//creamos la consulta a la base 
+                //creamos el cmd para que se lleve el query y cargue la conexion con la DB
+                MySqlCommand cmd = new MySqlCommand(query, GetConnection());
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                grid.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void CargarGridBuscarOdp(DataGridView grid,string txtBuscarOdp)
+        {
+
+
+            try
+            {
+
+                string query = string.Format("SELECT folioEncuesta as FOLIO_ENCUESTA, becarioId as ID_BECARIO, folioFormato as FOLIO_FORMATO, codResultado as CODIGO_RESULTADO FROM ordenpago WHERE folioEncuesta LIKE '%{0}%' OR becarioId LIKE '%{0}%' OR folioFormato LIKE '%{0}%'", txtBuscarOdp);//creamos la consulta a la base 
+                //creamos el cmd para que se lleve el query y cargue la conexion con la DB
+                MySqlCommand cmd = new MySqlCommand(query, GetConnection());
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                grid.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
             }
         }
         public bool setOrdenPago2(BecarioOrdenPago dtOrdenPago)
