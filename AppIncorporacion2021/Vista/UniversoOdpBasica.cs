@@ -13,6 +13,7 @@ using AppIncorporacion2021.Modelo;
 using AppIncorporacion2021.Data;
 using SpreadsheetLight;
 using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.Office.Interop.Excel;
 //using DocumentFormat.OpenXml.Spreadsheet;
 
 
@@ -25,6 +26,7 @@ namespace AppIncorporacion2021.Vista
         int contador = 0; //me va servir para contar el numero de archivos txt que encuentra dentro de la ruta
         ModeloUniversoOdpBasica smUniversoOdpBasica;
         ModeloOrdenPago smOdpBasica;
+        OpenFileDialog openFD = new OpenFileDialog();
         public UniversoOdpBasica()
         {
             InitializeComponent();
@@ -130,6 +132,41 @@ namespace AppIncorporacion2021.Vista
                 smOdpBasica.CargarGridBuscarOdp(gdtgOdpCapturado,gTxtOdpCapturado.Text);
             else
                 smOdpBasica.CargarGridOdp(gdtgOdpCapturado);
+        }
+
+        private void gBtnImportarExcelADbRemesa_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application xlApp;
+            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet xlworkSheet;
+            Microsoft.Office.Interop.Excel.Range xlRange;
+
+            int xlRow;
+            string strFileName;
+
+            openFD.Filter = "Excel Office | *.xls; *.xlsx";
+            openFD.ShowDialog();
+            strFileName = openFD.FileName;
+
+            //Condicionamos el acceso al archivo de excel
+            if (strFileName != "")
+            {
+                xlApp = new Microsoft.Office.Interop.Excel.Application();
+                xlWorkBook = xlApp.Workbooks.Open(strFileName);
+                xlworkSheet = xlWorkBook.Worksheets["Hoja1"];
+                xlRange = xlworkSheet.UsedRange;
+
+                int i = 0;
+
+                for (xlRow = 9; xlRow <= xlRange.Rows.Count; xlRow++)
+                {
+                    i++;
+                    gdtgvRemesasExcel.Rows.Add(i,xlRange.Cells[xlRow,1].Text, xlRange.Cells[xlRow, 2].Text, xlRange.Cells[xlRow, 3].Text, xlRange.Cells[xlRow, 4].Text, xlRange.Cells[xlRow, 5].Text, xlRange.Cells[xlRow, 6].Text, xlRange.Cells[xlRow, 7].Text, xlRange.Cells[xlRow, 8].Text, xlRange.Cells[xlRow, 9].Text, xlRange.Cells[xlRow, 10].Text, xlRange.Cells[xlRow, 11].Text, xlRange.Cells[xlRow, 12].Text);
+                }
+                xlWorkBook.Close();
+                xlApp.Quit();
+            }
+
         }
     }
 }
