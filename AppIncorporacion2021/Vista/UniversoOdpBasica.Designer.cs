@@ -52,11 +52,6 @@
             this.gTxtDirectorio = new Guna.UI.WinForms.GunaTextBox();
             this.gbtnDirectorioRemesa = new Guna.UI.WinForms.GunaButton();
             this.gdtgvRemesasExcel = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.gTxtOdpCapturado = new Guna.UI.WinForms.GunaTextBox();
-            this.gdtgOdpCapturado = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,11 +65,20 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.gTxtOdpCapturado = new Guna.UI.WinForms.GunaTextBox();
+            this.gdtgOdpCapturado = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgUniversoOdpBasica)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgvRemesasExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgOdpCapturado)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -261,14 +265,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.gBtnImportarExcelADbRemesa);
             this.panel1.Controls.Add(this.gunaLabel7);
             this.panel1.Controls.Add(this.gTxtDirectorio);
             this.panel1.Controls.Add(this.gbtnDirectorioRemesa);
-            this.panel1.Controls.Add(this.gdtgvRemesasExcel);
             this.panel1.Controls.Add(this.gunaLabel6);
             this.panel1.Controls.Add(this.gTxtOdpCapturado);
-            this.panel1.Controls.Add(this.gdtgOdpCapturado);
             this.panel1.Controls.Add(this.gunaLabel4);
             this.panel1.Controls.Add(this.gunaLabel3);
             this.panel1.Controls.Add(this.gdtgUniversoOdpBasica);
@@ -292,7 +296,7 @@
             this.gBtnImportarExcelADbRemesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gBtnImportarExcelADbRemesa.Image = ((System.Drawing.Image)(resources.GetObject("gBtnImportarExcelADbRemesa.Image")));
             this.gBtnImportarExcelADbRemesa.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnImportarExcelADbRemesa.Location = new System.Drawing.Point(984, 451);
+            this.gBtnImportarExcelADbRemesa.Location = new System.Drawing.Point(984, 428);
             this.gBtnImportarExcelADbRemesa.Name = "gBtnImportarExcelADbRemesa";
             this.gBtnImportarExcelADbRemesa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnImportarExcelADbRemesa.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -310,7 +314,7 @@
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel7.Location = new System.Drawing.Point(724, 408);
+            this.gunaLabel7.Location = new System.Drawing.Point(724, 385);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(158, 25);
             this.gunaLabel7.TabIndex = 33;
@@ -327,7 +331,7 @@
             this.gTxtDirectorio.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtDirectorio.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gTxtDirectorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtDirectorio.Location = new System.Drawing.Point(888, 397);
+            this.gTxtDirectorio.Location = new System.Drawing.Point(888, 374);
             this.gTxtDirectorio.Name = "gTxtDirectorio";
             this.gTxtDirectorio.PasswordChar = '\0';
             this.gTxtDirectorio.Radius = 15;
@@ -349,7 +353,7 @@
             this.gbtnDirectorioRemesa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gbtnDirectorioRemesa.Image = global::AppIncorporacion2021.Properties.Resources.icons8_google_web_search_60px;
             this.gbtnDirectorioRemesa.ImageSize = new System.Drawing.Size(40, 40);
-            this.gbtnDirectorioRemesa.Location = new System.Drawing.Point(684, 451);
+            this.gbtnDirectorioRemesa.Location = new System.Drawing.Point(684, 428);
             this.gbtnDirectorioRemesa.Name = "gbtnDirectorioRemesa";
             this.gbtnDirectorioRemesa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gbtnDirectorioRemesa.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -408,12 +412,12 @@
             this.gdtgvRemesasExcel.DefaultCellStyle = dataGridViewCellStyle6;
             this.gdtgvRemesasExcel.EnableHeadersVisualStyles = false;
             this.gdtgvRemesasExcel.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdtgvRemesasExcel.Location = new System.Drawing.Point(636, 513);
+            this.gdtgvRemesasExcel.Location = new System.Drawing.Point(4, 9);
             this.gdtgvRemesasExcel.Name = "gdtgvRemesasExcel";
             this.gdtgvRemesasExcel.ReadOnly = true;
             this.gdtgvRemesasExcel.RowHeadersVisible = false;
             this.gdtgvRemesasExcel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdtgvRemesasExcel.Size = new System.Drawing.Size(610, 239);
+            this.gdtgvRemesasExcel.Size = new System.Drawing.Size(614, 257);
             this.gdtgvRemesasExcel.TabIndex = 30;
             this.gdtgvRemesasExcel.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gdtgvRemesasExcel.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -437,122 +441,6 @@
             this.gdtgvRemesasExcel.ThemeStyle.RowsStyle.Height = 22;
             this.gdtgvRemesasExcel.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
             this.gdtgvRemesasExcel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            // 
-            // gunaLabel6
-            // 
-            this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel6.Location = new System.Drawing.Point(3, 464);
-            this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(112, 25);
-            this.gunaLabel6.TabIndex = 29;
-            this.gunaLabel6.Text = "BUSCAR:";
-            // 
-            // gTxtOdpCapturado
-            // 
-            this.gTxtOdpCapturado.BackColor = System.Drawing.Color.Transparent;
-            this.gTxtOdpCapturado.BaseColor = System.Drawing.Color.White;
-            this.gTxtOdpCapturado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gTxtOdpCapturado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gTxtOdpCapturado.FocusedBaseColor = System.Drawing.Color.White;
-            this.gTxtOdpCapturado.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gTxtOdpCapturado.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtOdpCapturado.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gTxtOdpCapturado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtOdpCapturado.Location = new System.Drawing.Point(121, 457);
-            this.gTxtOdpCapturado.Name = "gTxtOdpCapturado";
-            this.gTxtOdpCapturado.PasswordChar = '\0';
-            this.gTxtOdpCapturado.Radius = 15;
-            this.gTxtOdpCapturado.SelectedText = "";
-            this.gTxtOdpCapturado.Size = new System.Drawing.Size(443, 41);
-            this.gTxtOdpCapturado.TabIndex = 28;
-            this.gTxtOdpCapturado.TextChanged += new System.EventHandler(this.gTxtOdpCapturado_TextChanged);
-            // 
-            // gdtgOdpCapturado
-            // 
-            this.gdtgOdpCapturado.AllowUserToAddRows = false;
-            this.gdtgOdpCapturado.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.gdtgOdpCapturado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.gdtgOdpCapturado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gdtgOdpCapturado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gdtgOdpCapturado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            this.gdtgOdpCapturado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gdtgOdpCapturado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.gdtgOdpCapturado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdtgOdpCapturado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.gdtgOdpCapturado.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdtgOdpCapturado.DefaultCellStyle = dataGridViewCellStyle9;
-            this.gdtgOdpCapturado.EnableHeadersVisualStyles = false;
-            this.gdtgOdpCapturado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdtgOdpCapturado.Location = new System.Drawing.Point(9, 513);
-            this.gdtgOdpCapturado.Name = "gdtgOdpCapturado";
-            this.gdtgOdpCapturado.ReadOnly = true;
-            this.gdtgOdpCapturado.RowHeadersVisible = false;
-            this.gdtgOdpCapturado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdtgOdpCapturado.Size = new System.Drawing.Size(555, 239);
-            this.gdtgOdpCapturado.TabIndex = 15;
-            this.gdtgOdpCapturado.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gdtgOdpCapturado.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            this.gdtgOdpCapturado.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.Height = 45;
-            this.gdtgOdpCapturado.ThemeStyle.ReadOnly = true;
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.Height = 22;
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
-            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel4.Location = new System.Drawing.Point(23, 424);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(338, 25);
-            this.gunaLabel4.TabIndex = 14;
-            this.gunaLabel4.Text = "Universo de ODP\'s Capturados";
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(85, 13);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(288, 25);
-            this.gunaLabel3.TabIndex = 13;
-            this.gunaLabel3.Text = "Universo de ODP\'s Básica";
             // 
             // Column13
             // 
@@ -632,6 +520,134 @@
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gunaLabel6.Location = new System.Drawing.Point(3, 441);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(112, 25);
+            this.gunaLabel6.TabIndex = 29;
+            this.gunaLabel6.Text = "BUSCAR:";
+            // 
+            // gTxtOdpCapturado
+            // 
+            this.gTxtOdpCapturado.BackColor = System.Drawing.Color.Transparent;
+            this.gTxtOdpCapturado.BaseColor = System.Drawing.Color.White;
+            this.gTxtOdpCapturado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtOdpCapturado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gTxtOdpCapturado.FocusedBaseColor = System.Drawing.Color.White;
+            this.gTxtOdpCapturado.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gTxtOdpCapturado.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtOdpCapturado.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gTxtOdpCapturado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtOdpCapturado.Location = new System.Drawing.Point(121, 434);
+            this.gTxtOdpCapturado.Name = "gTxtOdpCapturado";
+            this.gTxtOdpCapturado.PasswordChar = '\0';
+            this.gTxtOdpCapturado.Radius = 15;
+            this.gTxtOdpCapturado.SelectedText = "";
+            this.gTxtOdpCapturado.Size = new System.Drawing.Size(443, 41);
+            this.gTxtOdpCapturado.TabIndex = 28;
+            this.gTxtOdpCapturado.TextChanged += new System.EventHandler(this.gTxtOdpCapturado_TextChanged);
+            // 
+            // gdtgOdpCapturado
+            // 
+            this.gdtgOdpCapturado.AllowUserToAddRows = false;
+            this.gdtgOdpCapturado.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gdtgOdpCapturado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.gdtgOdpCapturado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.gdtgOdpCapturado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gdtgOdpCapturado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.gdtgOdpCapturado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdtgOdpCapturado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.gdtgOdpCapturado.ColumnHeadersHeight = 45;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdtgOdpCapturado.DefaultCellStyle = dataGridViewCellStyle9;
+            this.gdtgOdpCapturado.EnableHeadersVisualStyles = false;
+            this.gdtgOdpCapturado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gdtgOdpCapturado.Location = new System.Drawing.Point(4, 9);
+            this.gdtgOdpCapturado.Name = "gdtgOdpCapturado";
+            this.gdtgOdpCapturado.ReadOnly = true;
+            this.gdtgOdpCapturado.RowHeadersVisible = false;
+            this.gdtgOdpCapturado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gdtgOdpCapturado.Size = new System.Drawing.Size(581, 257);
+            this.gdtgOdpCapturado.TabIndex = 15;
+            this.gdtgOdpCapturado.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gdtgOdpCapturado.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gdtgOdpCapturado.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.gdtgOdpCapturado.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gdtgOdpCapturado.ThemeStyle.HeaderStyle.Height = 45;
+            this.gdtgOdpCapturado.ThemeStyle.ReadOnly = true;
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.Height = 22;
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
+            this.gdtgOdpCapturado.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gunaLabel4.Location = new System.Drawing.Point(23, 401);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(338, 25);
+            this.gunaLabel4.TabIndex = 14;
+            this.gunaLabel4.Text = "Universo de ODP\'s Capturados";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(85, 13);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(288, 25);
+            this.gunaLabel3.TabIndex = 13;
+            this.gunaLabel3.Text = "Universo de ODP\'s Básica";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.gdtgOdpCapturado);
+            this.panel2.Location = new System.Drawing.Point(8, 481);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(588, 269);
+            this.panel2.TabIndex = 35;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.gdtgvRemesasExcel);
+            this.panel4.Location = new System.Drawing.Point(628, 478);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(624, 269);
+            this.panel4.TabIndex = 36;
+            // 
             // UniversoOdpBasica
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -651,6 +667,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgvRemesasExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgOdpCapturado)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -689,5 +707,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }
