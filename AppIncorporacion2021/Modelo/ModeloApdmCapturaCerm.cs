@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using AppIncorporacion2021.Data;
-
+using System.Windows.Forms;
+using System.Data;
 namespace AppIncorporacion2021.Modelo
 {
     class ModeloApdmCapturaCerm:Config.ConexionBD
@@ -23,6 +24,30 @@ namespace AppIncorporacion2021.Modelo
             {
                 _addSQL = value;
 
+            }
+        }
+
+        public void CargarGridCerm(DataGridView grid)
+        {
+
+            try
+            {
+
+                string query = string.Format("SELECT A.folioEncuesta, A.RESPUESTA FOLIO_FORMATO, B.FECHA_CAPTURA,B.CUPO,MUN.RESPUESTA AS MUNICIPIO,LOC.RESPUESTA AS LOCALIDAD FROM apdm_captura_cerm as A INNER JOIN apdm_resumen_encuesta_cerm AS B  ON A.folioEncuesta = B.FOLIO_ENCUESTA INNER JOIN apdm_codigos_respuesta AS C ON A.idCodigoRespuesta = C.idCodigoRespuesta INNER JOIN(SELECT A1.folioEncuesta, A1.RESPUESTA FROM apdm_captura_cerm A1 INNER JOIN apdm_codigos_respuesta B1 ON B1.idCodigoRespuesta = A1.idCodigoRespuesta WHERE B1.TEXTO_RESPUESTA = 'Localidad' GROUP BY A1.folioEncuesta, A1.RESPUESTA) AS LOC ON LOC.folioEncuesta = A.folioEncuesta INNER JOIN(SELECT A1.folioEncuesta, A1.RESPUESTA FROM apdm_captura_cerm A1 INNER JOIN apdm_codigos_respuesta B1 ON B1.idCodigoRespuesta = A1.idCodigoRespuesta WHERE B1.TEXTO_RESPUESTA = 'Municipio' GROUP BY A1.folioEncuesta, A1.RESPUESTA) AS MUN ON MUN.folioEncuesta = A.folioEncuesta WHERE C.TEXTO_RESPUESTA = 'folioCerm'; ");//creamos la consulta a la base 
+                //creamos el cmd para que se lleve el query y cargue la conexion con la DB
+                MySqlCommand cmd = new MySqlCommand(query, GetConnection());
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                grid.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
             }
         }
         public bool setApdmCapturaCerm(apdmCapturaCerm dtApdmCapturaCerm)

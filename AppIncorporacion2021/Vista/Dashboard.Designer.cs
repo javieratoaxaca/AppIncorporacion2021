@@ -80,7 +80,7 @@
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(1033, 42);
+            this.pnlEncabezado.Size = new System.Drawing.Size(1402, 42);
             this.pnlEncabezado.TabIndex = 0;
             this.pnlEncabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlEncabezado_MouseDown);
             this.pnlEncabezado.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlEncabezado_MouseMove);
@@ -100,7 +100,7 @@
             this.btnMin.Image = global::AppIncorporacion2021.Properties.Resources.min_64px;
             this.btnMin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnMin.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMin.Location = new System.Drawing.Point(883, 0);
+            this.btnMin.Location = new System.Drawing.Point(1262, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnMin.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -108,7 +108,7 @@
             this.btnMin.OnHoverImage = null;
             this.btnMin.OnPressedColor = System.Drawing.Color.Black;
             this.btnMin.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.btnMin.Size = new System.Drawing.Size(50, 42);
+            this.btnMin.Size = new System.Drawing.Size(40, 42);
             this.btnMin.TabIndex = 7;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
@@ -126,7 +126,7 @@
             this.btnMax.Image = global::AppIncorporacion2021.Properties.Resources.max_64px;
             this.btnMax.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnMax.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMax.Location = new System.Drawing.Point(933, 0);
+            this.btnMax.Location = new System.Drawing.Point(1302, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnMax.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -151,7 +151,7 @@
             this.btnClose.Image = global::AppIncorporacion2021.Properties.Resources.icons8_cancel_64px;
             this.btnClose.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(983, 0);
+            this.btnClose.Location = new System.Drawing.Point(1352, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnClose.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -167,7 +167,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Semi Rounded Sans Serif 7", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(27, 9);
+            this.gunaLabel1.Location = new System.Drawing.Point(22, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(120, 23);
             this.gunaLabel1.TabIndex = 5;
@@ -178,9 +178,9 @@
             // 
             this.pnlPiePagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.pnlPiePagina.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlPiePagina.Location = new System.Drawing.Point(0, 729);
+            this.pnlPiePagina.Location = new System.Drawing.Point(0, 840);
             this.pnlPiePagina.Name = "pnlPiePagina";
-            this.pnlPiePagina.Size = new System.Drawing.Size(1033, 13);
+            this.pnlPiePagina.Size = new System.Drawing.Size(1402, 13);
             this.pnlPiePagina.TabIndex = 1;
             // 
             // pnlCentral
@@ -190,7 +190,7 @@
             this.pnlCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentral.Location = new System.Drawing.Point(0, 42);
             this.pnlCentral.Name = "pnlCentral";
-            this.pnlCentral.Size = new System.Drawing.Size(1033, 687);
+            this.pnlCentral.Size = new System.Drawing.Size(1402, 798);
             this.pnlCentral.TabIndex = 2;
             // 
             // pnlMenu
@@ -199,7 +199,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMenu.Location = new System.Drawing.Point(240, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(793, 687);
+            this.pnlMenu.Size = new System.Drawing.Size(1162, 798);
             this.pnlMenu.TabIndex = 1;
             // 
             // pnlMenuLateral
@@ -216,7 +216,7 @@
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuLateral.Name = "pnlMenuLateral";
-            this.pnlMenuLateral.Size = new System.Drawing.Size(240, 687);
+            this.pnlMenuLateral.Size = new System.Drawing.Size(240, 798);
             this.pnlMenuLateral.TabIndex = 0;
             // 
             // pnlSubMenuAdmin
@@ -227,9 +227,9 @@
             this.pnlSubMenuAdmin.Controls.Add(this.gBtnSubMenuAdminEms);
             this.pnlSubMenuAdmin.Controls.Add(this.gBtnSubMenuAdminBasica);
             this.pnlSubMenuAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuAdmin.Location = new System.Drawing.Point(0, 486);
+            this.pnlSubMenuAdmin.Location = new System.Drawing.Point(0, 388);
             this.pnlSubMenuAdmin.Name = "pnlSubMenuAdmin";
-            this.pnlSubMenuAdmin.Size = new System.Drawing.Size(240, 182);
+            this.pnlSubMenuAdmin.Size = new System.Drawing.Size(240, 194);
             this.pnlSubMenuAdmin.TabIndex = 7;
             // 
             // gBtnSiDm
@@ -353,14 +353,14 @@
             this.gBtnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gBtnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("gBtnAdmin.Image")));
             this.gBtnAdmin.ImageSize = new System.Drawing.Size(20, 20);
-            this.gBtnAdmin.Location = new System.Drawing.Point(0, 444);
+            this.gBtnAdmin.Location = new System.Drawing.Point(0, 365);
             this.gBtnAdmin.Name = "gBtnAdmin";
             this.gBtnAdmin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gBtnAdmin.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gBtnAdmin.OnHoverForeColor = System.Drawing.Color.White;
             this.gBtnAdmin.OnHoverImage = null;
             this.gBtnAdmin.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnAdmin.Size = new System.Drawing.Size(240, 42);
+            this.gBtnAdmin.Size = new System.Drawing.Size(240, 23);
             this.gBtnAdmin.TabIndex = 6;
             this.gBtnAdmin.Text = "Herramientas";
             this.gBtnAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -373,7 +373,7 @@
             this.pnlSubMenuMetas.Controls.Add(this.gbtnSubMenuMetaEms);
             this.pnlSubMenuMetas.Controls.Add(this.gbtnSubMenuMetaBasica);
             this.pnlSubMenuMetas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuMetas.Location = new System.Drawing.Point(0, 314);
+            this.pnlSubMenuMetas.Location = new System.Drawing.Point(0, 235);
             this.pnlSubMenuMetas.Name = "pnlSubMenuMetas";
             this.pnlSubMenuMetas.Size = new System.Drawing.Size(240, 130);
             this.pnlSubMenuMetas.TabIndex = 5;
@@ -472,7 +472,7 @@
             this.gBtnDataGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gBtnDataGrid.Image = ((System.Drawing.Image)(resources.GetObject("gBtnDataGrid.Image")));
             this.gBtnDataGrid.ImageSize = new System.Drawing.Size(20, 20);
-            this.gBtnDataGrid.Location = new System.Drawing.Point(0, 272);
+            this.gBtnDataGrid.Location = new System.Drawing.Point(0, 193);
             this.gBtnDataGrid.Name = "gBtnDataGrid";
             this.gBtnDataGrid.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gBtnDataGrid.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -492,7 +492,7 @@
             this.pnlSubmenuUniversos.Controls.Add(this.gBtnSubMenuEms);
             this.pnlSubmenuUniversos.Controls.Add(this.gBtnSubMenuBasica);
             this.pnlSubmenuUniversos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubmenuUniversos.Location = new System.Drawing.Point(0, 142);
+            this.pnlSubmenuUniversos.Location = new System.Drawing.Point(0, 63);
             this.pnlSubmenuUniversos.Name = "pnlSubmenuUniversos";
             this.pnlSubmenuUniversos.Size = new System.Drawing.Size(240, 130);
             this.pnlSubmenuUniversos.TabIndex = 3;
@@ -511,7 +511,7 @@
             this.gBtnSubMenuJef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gBtnSubMenuJef.Image = global::AppIncorporacion2021.Properties.Resources.icons8_university_100px_1;
             this.gBtnSubMenuJef.ImageSize = new System.Drawing.Size(30, 30);
-            this.gBtnSubMenuJef.Location = new System.Drawing.Point(0, 84);
+            this.gBtnSubMenuJef.Location = new System.Drawing.Point(0, 83);
             this.gBtnSubMenuJef.Name = "gBtnSubMenuJef";
             this.gBtnSubMenuJef.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gBtnSubMenuJef.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -519,7 +519,7 @@
             this.gBtnSubMenuJef.OnHoverImage = null;
             this.gBtnSubMenuJef.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnSubMenuJef.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.gBtnSubMenuJef.Size = new System.Drawing.Size(240, 42);
+            this.gBtnSubMenuJef.Size = new System.Drawing.Size(240, 35);
             this.gBtnSubMenuJef.TabIndex = 2;
             this.gBtnSubMenuJef.Text = "Educación Superior";
             this.gBtnSubMenuJef.Click += new System.EventHandler(this.gBtnSubMenuJef_Click);
@@ -538,7 +538,7 @@
             this.gBtnSubMenuEms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gBtnSubMenuEms.Image = global::AppIncorporacion2021.Properties.Resources.icons8_classroom_52px_1;
             this.gBtnSubMenuEms.ImageSize = new System.Drawing.Size(30, 30);
-            this.gBtnSubMenuEms.Location = new System.Drawing.Point(0, 42);
+            this.gBtnSubMenuEms.Location = new System.Drawing.Point(0, 29);
             this.gBtnSubMenuEms.Name = "gBtnSubMenuEms";
             this.gBtnSubMenuEms.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gBtnSubMenuEms.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -546,7 +546,7 @@
             this.gBtnSubMenuEms.OnHoverImage = null;
             this.gBtnSubMenuEms.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnSubMenuEms.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.gBtnSubMenuEms.Size = new System.Drawing.Size(240, 42);
+            this.gBtnSubMenuEms.Size = new System.Drawing.Size(240, 54);
             this.gBtnSubMenuEms.TabIndex = 1;
             this.gBtnSubMenuEms.Text = "Educación Media Superior";
             this.gBtnSubMenuEms.Click += new System.EventHandler(this.gBtnSubMenuEms_Click);
@@ -573,7 +573,7 @@
             this.gBtnSubMenuBasica.OnHoverImage = null;
             this.gBtnSubMenuBasica.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnSubMenuBasica.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.gBtnSubMenuBasica.Size = new System.Drawing.Size(240, 42);
+            this.gBtnSubMenuBasica.Size = new System.Drawing.Size(240, 29);
             this.gBtnSubMenuBasica.TabIndex = 0;
             this.gBtnSubMenuBasica.Text = "Educación Básica";
             this.gBtnSubMenuBasica.Click += new System.EventHandler(this.gBtnSubMenuBasica_Click);
@@ -591,14 +591,14 @@
             this.gBtnUniversos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gBtnUniversos.Image = global::AppIncorporacion2021.Properties.Resources.icons8_data_grid_60px;
             this.gBtnUniversos.ImageSize = new System.Drawing.Size(50, 50);
-            this.gBtnUniversos.Location = new System.Drawing.Point(0, 100);
+            this.gBtnUniversos.Location = new System.Drawing.Point(0, 17);
             this.gBtnUniversos.Name = "gBtnUniversos";
             this.gBtnUniversos.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gBtnUniversos.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gBtnUniversos.OnHoverForeColor = System.Drawing.Color.White;
             this.gBtnUniversos.OnHoverImage = null;
             this.gBtnUniversos.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnUniversos.Size = new System.Drawing.Size(240, 42);
+            this.gBtnUniversos.Size = new System.Drawing.Size(240, 46);
             this.gBtnUniversos.TabIndex = 1;
             this.gBtnUniversos.Text = "Universos";
             this.gBtnUniversos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -609,14 +609,14 @@
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(240, 100);
+            this.pnlLogo.Size = new System.Drawing.Size(240, 17);
             this.pnlLogo.TabIndex = 0;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 742);
+            this.ClientSize = new System.Drawing.Size(1402, 853);
             this.Controls.Add(this.pnlCentral);
             this.Controls.Add(this.pnlPiePagina);
             this.Controls.Add(this.pnlEncabezado);

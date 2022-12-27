@@ -21,10 +21,12 @@ namespace AppIncorporacion2021.Vista
     public partial class OrdenPago : Form
     {
         int contador = 0; //me va servir para contar el numero de archivos txt que encuentra dentro de la ruta
-
+        ModeloOrdenPago smOrdenPago = new ModeloOrdenPago();
+        
         public OrdenPago()
         {
             InitializeComponent();
+            
         }
 
         private void gbtnDirectorio_Click(object sender, EventArgs e)
@@ -245,6 +247,21 @@ namespace AppIncorporacion2021.Vista
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void OrdenPago_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gTxtBuscarOdp_TextChanged(object sender, EventArgs e)
+        {
+ 
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

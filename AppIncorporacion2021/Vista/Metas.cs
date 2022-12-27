@@ -51,7 +51,7 @@ namespace AppIncorporacion2021.Vista
             catch (MySqlException ex) { MessageBox.Show(ex.Message); }
         }
         //Metodo para Saber cuantas se le aplico Encuesta de CRIS
-        private void tutorasBecasCris()
+       /* private void tutorasBecasCris()
         {
             // MySqlConnection cnxx = new MySqlConnection();
             try
@@ -61,7 +61,7 @@ namespace AppIncorporacion2021.Vista
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = cnx.GetConnection();
                 comando.CommandText = "SELECT COUNT(FOLIO_ENCUESTA) as TOTALCRIS FROM nominainco WHERE CR_CRIS='SE APLICO LA ENCUESTA'";
-                MySqlDataReader mdr = comando.ExecuteReader();
+            MySqlDataReader mdr = comando.ExecuteReader();
                 //se comprueba si hay algun dato dispobible en la base de datos 
                 if (mdr.Read() == true)
                 {
@@ -73,9 +73,9 @@ namespace AppIncorporacion2021.Vista
                 }
             }
             catch (MySqlException ex) { MessageBox.Show(ex.Message); }
-        }
+        }*/
         //Metodo para saber cuantas se les aplico Notificacion de Incorporacion
-        private void tutorasBecasNoti()
+       /* private void tutorasBecasNoti()
         {
             // MySqlConnection cnxx = new MySqlConnection();
             try
@@ -97,7 +97,7 @@ namespace AppIncorporacion2021.Vista
                 }
             }
             catch (MySqlException ex) { MessageBox.Show(ex.Message); }
-        }
+        }*/
         //Metodo para saber cuantas se les Entrego su Aviso de Cobro
         //Metodo para cargar el cuadro gral de los detalles de la Db de Incorporacion  su CR
         private void DataGridTutoras()
@@ -148,11 +148,11 @@ namespace AppIncorporacion2021.Vista
 
         private void Metas_Load(object sender, EventArgs e)
         {
-            tutorasBecas();
-            tutorasBecasCris();
-            tutorasBecasNoti();
-            tutorasBecasAviso();
-            DataGridTutoras();
+            //tutorasBecas();
+            //tutorasBecasCris();
+            //tutorasBecasNoti();
+            //tutorasBecasAviso();
+            //DataGridTutoras();
             
         }
 

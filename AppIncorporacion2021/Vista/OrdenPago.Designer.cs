@@ -40,12 +40,13 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gTxtFiltro = new Guna.UI.WinForms.GunaTextBox();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.dtgvArchivos = new System.Windows.Forms.DataGridView();
-            this.rTxtboxMostrarArchivos = new System.Windows.Forms.RichTextBox();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.lblTotalArchivos = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.ltbArchivos = new System.Windows.Forms.ListBox();
+            this.lblTotalArchivos = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.dtgvArchivos = new System.Windows.Forms.DataGridView();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.rTxtboxMostrarArchivos = new System.Windows.Forms.RichTextBox();
             this.panel3.SuspendLayout();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvArchivos)).BeginInit();
@@ -53,6 +54,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Controls.Add(this.gBtnImportarBD);
@@ -64,7 +67,6 @@
             this.panel3.Controls.Add(this.gbtnDirectorio);
             this.panel3.Controls.Add(this.gunaLabel2);
             this.panel3.Controls.Add(this.gTxtFiltro);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1264, 162);
@@ -177,7 +179,7 @@
             this.gTxtDirectorio.PasswordChar = '\0';
             this.gTxtDirectorio.Radius = 15;
             this.gTxtDirectorio.SelectedText = "";
-            this.gTxtDirectorio.Size = new System.Drawing.Size(445, 48);
+            this.gTxtDirectorio.Size = new System.Drawing.Size(400, 48);
             this.gTxtDirectorio.TabIndex = 12;
             // 
             // gBtnCloseForm
@@ -259,96 +261,112 @@
             this.gTxtFiltro.PasswordChar = '\0';
             this.gTxtFiltro.Radius = 15;
             this.gTxtFiltro.SelectedText = "";
-            this.gTxtFiltro.Size = new System.Drawing.Size(445, 48);
+            this.gTxtFiltro.Size = new System.Drawing.Size(400, 48);
             this.gTxtFiltro.TabIndex = 0;
             this.gTxtFiltro.Text = "*.txt";
             // 
             // gunaElipsePanel1
             // 
+            this.gunaElipsePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.AntiqueWhite;
-            this.gunaElipsePanel1.Controls.Add(this.dtgvArchivos);
-            this.gunaElipsePanel1.Controls.Add(this.rTxtboxMostrarArchivos);
-            this.gunaElipsePanel1.Controls.Add(this.gunaLabel5);
-            this.gunaElipsePanel1.Controls.Add(this.lblTotalArchivos);
+            this.gunaElipsePanel1.Controls.Add(this.gunaLabel4);
             this.gunaElipsePanel1.Controls.Add(this.ltbArchivos);
+            this.gunaElipsePanel1.Controls.Add(this.lblTotalArchivos);
+            this.gunaElipsePanel1.Controls.Add(this.gunaLabel5);
+            this.gunaElipsePanel1.Controls.Add(this.dtgvArchivos);
             this.gunaElipsePanel1.Controls.Add(this.gunaLabel3);
-            this.gunaElipsePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaElipsePanel1.Controls.Add(this.rTxtboxMostrarArchivos);
             this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Size = new System.Drawing.Size(1264, 694);
             this.gunaElipsePanel1.TabIndex = 5;
             // 
-            // dtgvArchivos
+            // gunaLabel4
             // 
-            this.dtgvArchivos.AllowUserToAddRows = false;
-            this.dtgvArchivos.AllowUserToDeleteRows = false;
-            this.dtgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvArchivos.Location = new System.Drawing.Point(569, 411);
-            this.dtgvArchivos.Name = "dtgvArchivos";
-            this.dtgvArchivos.ReadOnly = true;
-            this.dtgvArchivos.Size = new System.Drawing.Size(683, 238);
-            this.dtgvArchivos.TabIndex = 11;
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gunaLabel4.Location = new System.Drawing.Point(611, 412);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(188, 25);
+            this.gunaLabel4.TabIndex = 19;
+            this.gunaLabel4.Text = "Contenido Odps:";
             // 
-            // rTxtboxMostrarArchivos
+            // ltbArchivos
             // 
-            this.rTxtboxMostrarArchivos.Location = new System.Drawing.Point(569, 203);
-            this.rTxtboxMostrarArchivos.Name = "rTxtboxMostrarArchivos";
-            this.rTxtboxMostrarArchivos.Size = new System.Drawing.Size(683, 201);
-            this.rTxtboxMostrarArchivos.TabIndex = 10;
-            this.rTxtboxMostrarArchivos.Text = "";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(565, 177);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(212, 25);
-            this.gunaLabel5.TabIndex = 9;
-            this.gunaLabel5.Text = "Contenido Archivo:";
+            this.ltbArchivos.FormattingEnabled = true;
+            this.ltbArchivos.Location = new System.Drawing.Point(27, 235);
+            this.ltbArchivos.Name = "ltbArchivos";
+            this.ltbArchivos.Size = new System.Drawing.Size(562, 394);
+            this.ltbArchivos.TabIndex = 14;
             // 
             // lblTotalArchivos
             // 
             this.lblTotalArchivos.AutoSize = true;
             this.lblTotalArchivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalArchivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.lblTotalArchivos.Location = new System.Drawing.Point(12, 665);
+            this.lblTotalArchivos.Location = new System.Drawing.Point(22, 643);
             this.lblTotalArchivos.Name = "lblTotalArchivos";
             this.lblTotalArchivos.Size = new System.Drawing.Size(342, 25);
-            this.lblTotalArchivos.TabIndex = 8;
+            this.lblTotalArchivos.TabIndex = 15;
             this.lblTotalArchivos.Text = "Total de Archivos Encontrados:";
             // 
-            // ltbArchivos
+            // gunaLabel5
             // 
-            this.ltbArchivos.FormattingEnabled = true;
-            this.ltbArchivos.Location = new System.Drawing.Point(58, 203);
-            this.ltbArchivos.Name = "ltbArchivos";
-            this.ltbArchivos.Size = new System.Drawing.Size(480, 446);
-            this.ltbArchivos.TabIndex = 7;
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gunaLabel5.Location = new System.Drawing.Point(634, 189);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(212, 25);
+            this.gunaLabel5.TabIndex = 16;
+            this.gunaLabel5.Text = "Contenido Archivo:";
+            // 
+            // dtgvArchivos
+            // 
+            this.dtgvArchivos.AllowUserToAddRows = false;
+            this.dtgvArchivos.AllowUserToDeleteRows = false;
+            this.dtgvArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvArchivos.Location = new System.Drawing.Point(616, 443);
+            this.dtgvArchivos.Name = "dtgvArchivos";
+            this.dtgvArchivos.ReadOnly = true;
+            this.dtgvArchivos.Size = new System.Drawing.Size(633, 186);
+            this.dtgvArchivos.TabIndex = 18;
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(22, 177);
+            this.gunaLabel3.Location = new System.Drawing.Point(22, 189);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(154, 25);
-            this.gunaLabel3.TabIndex = 6;
+            this.gunaLabel3.TabIndex = 13;
             this.gunaLabel3.Text = "Ruta Archivo:";
+            // 
+            // rTxtboxMostrarArchivos
+            // 
+            this.rTxtboxMostrarArchivos.Location = new System.Drawing.Point(616, 235);
+            this.rTxtboxMostrarArchivos.Name = "rTxtboxMostrarArchivos";
+            this.rTxtboxMostrarArchivos.Size = new System.Drawing.Size(633, 165);
+            this.rTxtboxMostrarArchivos.TabIndex = 17;
+            this.rTxtboxMostrarArchivos.Text = "";
             // 
             // OrdenPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 694);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.gunaElipsePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OrdenPago";
             this.Text = "OrdenPago";
+            this.Load += new System.EventHandler(this.OrdenPago_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.gunaElipsePanel1.ResumeLayout(false);
@@ -371,11 +389,12 @@
         private Guna.UI.WinForms.GunaButton gBtnExcel;
         private Guna.UI.WinForms.GunaButton gBtnLimpiarCajas;
         private Guna.UI.WinForms.GunaButton gBtnImportarBD;
-        private System.Windows.Forms.DataGridView dtgvArchivos;
-        private System.Windows.Forms.RichTextBox rTxtboxMostrarArchivos;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel lblTotalArchivos;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private System.Windows.Forms.ListBox ltbArchivos;
+        private Guna.UI.WinForms.GunaLabel lblTotalArchivos;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private System.Windows.Forms.DataGridView dtgvArchivos;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private System.Windows.Forms.RichTextBox rTxtboxMostrarArchivos;
     }
 }

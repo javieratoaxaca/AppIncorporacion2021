@@ -11,7 +11,7 @@ namespace AppIncorporacion2021
 {
     public partial class CargarDB : Form
     {
-        ConexionSQLite cnx=null;
+       // ConexionSQLite cnx=null;
 
         public CargarDB()
         {
@@ -24,7 +24,7 @@ namespace AppIncorporacion2021
             this.Close();
         }
         //Sirvara para obtener el tipo de base de datos a cargar
-        private void gBtnExaminar_Click(object sender, EventArgs e)
+        /*private void gBtnExaminar_Click(object sender, EventArgs e)
         {
             //gTxtFiltro.Text = "*.S3DB";
             OpenFileDialog fBrowDialog = new OpenFileDialog();
@@ -45,7 +45,7 @@ namespace AppIncorporacion2021
                 MessageBox.Show(ex.Message);
             }
            
-        }
+        }*/
 
         private void gBtnBuscarDB_Click(object sender, EventArgs e)
         {

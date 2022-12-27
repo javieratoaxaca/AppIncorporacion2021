@@ -84,7 +84,7 @@
             this.gBtnExaminar.Size = new System.Drawing.Size(159, 46);
             this.gBtnExaminar.TabIndex = 13;
             this.gBtnExaminar.Text = "Examinar";
-            this.gBtnExaminar.Click += new System.EventHandler(this.gBtnExaminar_Click);
+           // this.gBtnExaminar.Click += new System.EventHandler(this.gBtnExaminar_Click);
             // 
             // gTxtDitectorio
             // 

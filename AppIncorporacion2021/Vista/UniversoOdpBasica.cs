@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using SpreadsheetLight;
 using AppIncorporacion2021.Modelo;
-using AppIncorporacion2021.Data;
-using SpreadsheetLight;
-using DocumentFormat.OpenXml.Spreadsheet;
-using Microsoft.Office.Interop.Excel;
+
 //using DocumentFormat.OpenXml.Spreadsheet;
 
 

@@ -36,6 +36,7 @@ namespace AppIncorporacion2021.Config
             {
                 throw new Exception("Error: Al realizar la conexion la Base de datos." + ex.Message);
             }
+
             return mysqlcnn;
         }
         public int ExecuteQuery(string SQL)
@@ -92,5 +93,7 @@ namespace AppIncorporacion2021.Config
 
 
         }
+
+        
     }
 }

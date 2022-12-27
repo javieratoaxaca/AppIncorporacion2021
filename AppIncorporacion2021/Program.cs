@@ -17,7 +17,7 @@ namespace AppIncorporacion2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Vista.Dashboard());
+            Application.Run(new Vista.Dashboard());
             //Application.Run(new Main());
         }
     }

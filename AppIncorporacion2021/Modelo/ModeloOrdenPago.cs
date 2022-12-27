@@ -34,7 +34,7 @@ namespace AppIncorporacion2021.Modelo
             try
             {
 
-                string query = string.Format("SELECT folioEncuesta as FOLIO_ENCUESTA, becarioId as ID_BECARIO, folioFormato as FOLIO_FORMATO, codResultado as CODIGO_RESULTADO FROM ordenpago ");//creamos la consulta a la base 
+                string query = string.Format("SELECT distinct(folioFormato) as FOLIO_FORMATO,becarioId as Becario_ID, folioEncuesta as FOLIO_ENCUESTA,codResultado as CODIGO_RESULTADO FROM ordenpago group by folioFormato order by folioFormato ");//creamos la consulta a la base 
                 //creamos el cmd para que se lleve el query y cargue la conexion con la DB
                 MySqlCommand cmd = new MySqlCommand(query, GetConnection());
 
@@ -59,7 +59,7 @@ namespace AppIncorporacion2021.Modelo
             try
             {
 
-                string query = string.Format("SELECT folioEncuesta as FOLIO_ENCUESTA, becarioId as ID_BECARIO, folioFormato as FOLIO_FORMATO, codResultado as CODIGO_RESULTADO FROM ordenpago WHERE folioEncuesta LIKE '%{0}%' OR becarioId LIKE '%{0}%' OR folioFormato LIKE '%{0}%'", txtBuscarOdp);//creamos la consulta a la base 
+                string query = string.Format("SELECT distinct(folioFormato) as FOLIO_FORMATO,becarioId as Becario_ID, folioEncuesta as FOLIO_ENCUESTA,codResultado as CODIGO_RESULTADO FROM ordenpago WHERE  becarioId LIKE '%{0}%' OR folioFormato LIKE '%{0}%'", txtBuscarOdp);//creamos la consulta a la base 
                 //creamos el cmd para que se lleve el query y cargue la conexion con la DB
                 MySqlCommand cmd = new MySqlCommand(query, GetConnection());
 

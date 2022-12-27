@@ -40,6 +40,8 @@ namespace AppIncorporacion2021.Modelo
 
 
         }
+
+        
         #endregion
         public DataTable CargarCmbRegion()
         {
